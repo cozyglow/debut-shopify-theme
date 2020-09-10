@@ -1,2 +1,1 @@
-# debut-shopify-theme
-Debut Shopify theme.
+# Debut Shopify theme
