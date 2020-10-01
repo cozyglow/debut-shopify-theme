@@ -1,0 +1,10 @@
+#shopify-product-reviews.container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#shopify-product-reviews .spr-container,
+#shopify-product-reviews .spr-review {
+  border: none;
+}
+/*# sourceMappingURL=shopify.css.map */
