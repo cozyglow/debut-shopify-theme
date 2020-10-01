@@ -3,7 +3,7 @@
     "name": "theme_info",
     "theme_name": "Cozy Glow Debut",
     "theme_author": "Cozy Glow & Shopify",
-    "theme_version": "17.3.0",
+    "theme_version": "17.4.1",
     "theme_documentation_url": "https://help.shopify.com/manual/using-themes/themes-by-shopify/debut",
     "theme_support_url": "https://support.shopify.com/"
   },
@@ -848,7 +848,7 @@
       "fr": "Médias sociaux",
       "hi": "सोशल मीडिया",
       "it": "Social media",
-      "ja": "ソーシャルメディア",
+      "ja": "SNS",
       "ko": "소셜 미디어",
       "nb": "Sosiale medier",
       "nl": "Social media",

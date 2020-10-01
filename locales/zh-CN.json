@@ -364,7 +364,7 @@
     },
     "customer": {
       "account": "账户",
-      "log_out": "退出",
+      "log_out": "登出",
       "log_in": "登录",
       "create_account": "创建账户"
     },

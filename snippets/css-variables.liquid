@@ -13,13 +13,13 @@
 
   :root {
     --color-text: {{ settings.color_text }};
-    --color-text-rgb: {{ settings.color_text | color_to_rgb | remove: 'rgb(' | remove: ')' }};
+    --color-text-rgb: {{ settings.color_text | color_to_rgb | remove: 'rgb(' | remove: 'rgba(' | remove: ')' | remove: ', 0.0' }};
     --color-body-text: {{ settings.color_body_text }};
     --color-sale-text: {{ settings.color_sale_text }};
     --color-small-button-text-border: {{ settings.color_small_button_text_border }};
     --color-text-field: {{ settings.color_text_field }};
     --color-text-field-text: {{ settings.color_text_field_text }};
-    --color-text-field-text-rgb: {{ settings.color_text_field_text | color_to_rgb | remove: 'rgb(' | remove: ')' }};
+    --color-text-field-text-rgb: {{ settings.color_text_field_text | color_to_rgb | remove: 'rgb(' | remove: 'rgba(' | remove: ')' | remove: ', 0.0' }};
 
     --color-btn-primary: {{ settings.color_button }};
     --color-btn-primary-darker: {{ settings.color_button | color_darken: 10 }};
@@ -38,13 +38,13 @@
 
     --color-body: {{ settings.color_body_bg }};
     --color-bg: {{ settings.color_body_bg }};
-    --color-bg-rgb: {{ settings.color_body_bg | color_to_rgb | remove: 'rgb(' | remove: ')' }};
+    --color-bg-rgb: {{ settings.color_body_bg | color_to_rgb | remove: 'rgb(' | remove: 'rgba(' | remove: ')' | remove: ', 0.0' }};
     --color-bg-alt: {{ settings.color_body_text | color_modify: 'alpha', 0.05 }};
     --color-bg-currency-selector: {{ settings.color_body_text | color_modify: 'alpha', 0.2 }};
 
     --color-overlay-title-text: {{ settings.color_image_overlay_text }};
     --color-image-overlay: {{ settings.color_image_overlay }};
-    --color-image-overlay-rgb: {{ settings.color_image_overlay | color_to_rgb | remove: 'rgb(' | remove: ')' }};
+    --color-image-overlay-rgb: {{ settings.color_image_overlay | color_to_rgb | remove: 'rgb(' | remove: 'rgba(' | remove: ')' | remove: ', 0.0' }};
 
     {%- assign image_overlay_opacity = settings.image_overlay_opacity | divided_by: 100.00 -%}
     --opacity-image-overlay: {{ image_overlay_opacity }};
