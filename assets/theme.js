@@ -3060,7 +3060,9 @@ theme.MobileNav = (function() {
   function init() {
     cacheSelectors();
 
-    cache.mobileNavToggle.addEventListener('click', toggleMobileNav);
+    if (cache.mobileNavToggle) {
+      cache.mobileNavToggle.addEventListener('click', toggleMobileNav);
+    }
 
     cache.subNavToggleBtns.forEach(function(element) {
       element.addEventListener('click', toggleSubNav);
@@ -8074,20 +8076,30 @@ theme.Product = (function() {
       fetch('/cart/add.js', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'X-Requested-With': 'XMLHttpRequest'
         },
         body: theme.Helpers.serialize(form)
       })
         .then(function(response) {
           return response.json();
         })
-        .then(function(item) {
+        .then(function(json) {
+          if (json.status && json.status !== 200) {
+            var error = new Error(json.description);
+            error.isFromServer = true;
+            throw error;
+          }
           self._hideErrorMessage();
-          self._setupCartPopup(item);
+          self._setupCartPopup(json);
         })
         .catch(function(error) {
           self.previouslyFocusedElement.focus();
-          self._showErrorMessage(theme.strings.cartError);
+          self._showErrorMessage(
+            error.isFromServer && error.message.length
+              ? error.message
+              : theme.strings.cartError
+          );
           self._handleButtonLoadingState(false);
           // eslint-disable-next-line no-console
           console.log(error);
@@ -8877,6 +8889,7 @@ theme.ProductRecommendations = (function() {
         if (productHtml.trim() === '') return;
 
         container.innerHTML = productHtml;
+        container.innerHTML = container.firstElementChild.innerHTML;
 
         window.performance.mark(
           'debut:product:fetch_product_recommendations.end'

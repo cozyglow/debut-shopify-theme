@@ -388,7 +388,7 @@
   },
   "products": {
     "product": {
-      "regular_price": "Zwykła cena",
+      "regular_price": "Cena regularna",
       "sold_out": "Wyprzedane",
       "unavailable": "Niedostępne",
       "on_sale": "Sprzedaż",
