@@ -1,1 +1,1 @@
-# Debut Shopify theme
+# Cozy Glow Debut Shopify theme
