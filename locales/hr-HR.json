@@ -160,8 +160,7 @@
       "back_to_blog": "Natrag na {{ title }}",
       "tags": "Oznake",
       "article_with_count": {
-        "zero": "0 artikla",
-        "one": "1 artikl",
+        "one": "Broj artikala: {{ count }}",
         "other": "Broj artikala: {{ count }}",
         "few": "Broj artikala: {{ count }}"
       }
@@ -416,6 +415,17 @@
       "remaining_html": "preostalo: {{ balance }}",
       "add_to_apple_wallet": "Dodajte u novčanik Apple Wallet",
       "qr_image_alt": "QR kôd – skenirajte da biste iskoristili poklon karticu"
+    }
+  },
+  "store_availability": {
+    "general": {
+      "view_store_info": "Pogledaj informacije o trgovini",
+      "check_other_stores": "Provjeri dostupnost u drugim trgovinama",
+      "pick_up_available": "Dostupno je preuzimanje",
+      "pick_up_currently_unavailable": "Preuzimanje trenutno nije dostupno",
+      "pick_up_available_at_html": "Preuzimanje je dostupno na lokaciji <strong>{{ location_name }}</strong>",
+      "pick_up_unavailable_at_html": "Preuzimanje trenutno nije dostupno na lokaciji <strong>{{ location_name }}</strong>",
+      "confirm_address": "Obrati se trgovini radi potvrde adrese"
     }
   }
 }

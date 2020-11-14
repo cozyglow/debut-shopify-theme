@@ -135,9 +135,8 @@
       "back_to_blog": "Voltar para {{ title }}",
       "tags": "Tag",
       "article_with_count": {
-        "one": "1 artigo",
-        "other": "{{ count }} artigos",
-        "zero": "0 artigo"
+        "one": "{{ count }} artigo",
+        "other": "{{ count }} artigos"
       }
     },
     "comments": {
@@ -343,7 +342,7 @@
       "product_description": "Essa área é usada para descrever as informações do seu produto. Conte aos clientes sobre a aparência, textura e estilo de seu produto. Adicione detalhes como cores, materiais utilizados, tamanhos e lugar de fabricação.",
       "collection_title": "Nome da sua coleção",
       "blog_title": "Título de seu post",
-      "blog_excerpt": "Sua loja ainda não publicou nenhum post no blog. Um blog pode ser usado para falar sobre lançamentos de novos produtos, dicas ou outras novidades que você deseja compartilhar com seus clientes. Confira o blog de e-commerce da Shopify para se inspirar e ver dicas para sua própria loja e blog.",
+      "blog_excerpt": "Sua loja ainda não publicou nenhum post no blog. Um blog pode ser usado para falar sobre lançamentos de novos produtos, dicas ou outras novidades que você quer compartilhar com seus clientes. Confira o blog de e-commerce da Shopify para se inspirar e ver dicas para sua própria loja e blog.",
       "blog_author": "Nome do autor",
       "no_content": "Atualmente, esta seção não possui nenhum conteúdo. Adicione conteúdo a esta seção usando a barra lateral."
     }
@@ -409,6 +408,17 @@
       "remaining_html": "{{ balance }} restante(s)",
       "add_to_apple_wallet": "Adicionar ao Apple Wallet",
       "qr_image_alt": "código QR - digitalizar para resgatar cartão de presente"
+    }
+  },
+  "store_availability": {
+    "general": {
+      "view_store_info": "Ver as informações da loja",
+      "check_other_stores": "Verificar a disponibilidade em outras lojas",
+      "pick_up_available": "Retirada disponível",
+      "pick_up_currently_unavailable": "Retirada indisponível no momento",
+      "pick_up_available_at_html": "Retirada disponível em <strong>{{ location_name }}</strong>",
+      "pick_up_unavailable_at_html": "Retirada em <strong>{{ location_name }}</strong> indisponível no momento",
+      "confirm_address": "Entre em contato com a loja para confirmar o endereço"
     }
   }
 }

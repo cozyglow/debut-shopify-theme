@@ -135,9 +135,8 @@
       "back_to_blog": "Regressar a {{ title }}",
       "tags": "Tags",
       "article_with_count": {
-        "one": "1 artigo",
-        "other": "{{ count }} artigos",
-        "zero": "0 artigos"
+        "one": "{{ count }} artigo",
+        "other": "{{ count }} artigos"
       }
     },
     "comments": {
@@ -409,6 +408,17 @@
       "remaining_html": "{{ balance }} restante",
       "add_to_apple_wallet": "Adicionar ao Apple Wallet",
       "qr_image_alt": "QR code - digitalizar para resgatar cartão de oferta"
+    }
+  },
+  "store_availability": {
+    "general": {
+      "view_store_info": "Ver informações da loja",
+      "check_other_stores": "Verificar a disponibilidade noutras lojas",
+      "pick_up_available": "Recolha disponível",
+      "pick_up_currently_unavailable": "Recolha atualmente indisponível",
+      "pick_up_available_at_html": "Recolha disponível em <strong>{{ location_name }}</strong>",
+      "pick_up_unavailable_at_html": "Recolha atualmente indisponível em <strong>{{ location_name }}</strong>",
+      "confirm_address": "Contacte a loja para confirmar o endereço"
     }
   }
 }

@@ -135,9 +135,8 @@
       "back_to_blog": "{{ title }} पर वापस जाएं",
       "tags": "टैग",
       "article_with_count": {
-        "one": "1 लेख",
-        "other": "{{ count }} लेख",
-        "zero": "0 लेख"
+        "one": "{{ count }} लेख",
+        "other": "{{ count }} लेख"
       }
     },
     "comments": {
@@ -409,6 +408,17 @@
       "remaining_html": "{{ balance }} बचा हैं",
       "add_to_apple_wallet": "Apple Wallet में जोड़ें",
       "qr_image_alt": "QR कोड — गिफ़्ट कार्ड रिडिम करने के लिए स्कैन करें"
+    }
+  },
+  "store_availability": {
+    "general": {
+      "view_store_info": "स्टोर की जानकारी देखें",
+      "check_other_stores": "अन्य स्टोर पर उपलब्धता की जांच करें",
+      "pick_up_available": "पिकअप उपलब्ध",
+      "pick_up_currently_unavailable": "वर्तमान में पिकअप अनुपलब्ध है",
+      "pick_up_available_at_html": "<strong>{{ location_name }}</strong> पर उपलब्ध पिकअप",
+      "pick_up_unavailable_at_html": "पिकअप वर्तमान में <strong>{{ location_name }}</strong> पर अनुपलब्ध",
+      "confirm_address": "पते की पुष्टि करने के लिए स्टोर से संपर्क करें"
     }
   }
 }

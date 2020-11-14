@@ -135,9 +135,8 @@
       "back_to_blog": "返回 {{ title }}",
       "tags": "標籤",
       "article_with_count": {
-        "one": "1 篇文章",
-        "other": "{{ count }} 篇文章",
-        "zero": "0 篇文章"
+        "one": "{{ count }} 篇文章",
+        "other": "{{ count }} 篇文章"
       }
     },
     "comments": {
@@ -409,6 +408,17 @@
       "remaining_html": "尚餘 {{ balance }}",
       "add_to_apple_wallet": "加入 Apple Wallet",
       "qr_image_alt": "QR 條碼 — 掃描以兌換禮品卡"
+    }
+  },
+  "store_availability": {
+    "general": {
+      "view_store_info": "檢視商店資訊",
+      "check_other_stores": "查看其他商店的可用性",
+      "pick_up_available": "可提供取貨服務",
+      "pick_up_currently_unavailable": "目前無法提供取貨服務",
+      "pick_up_available_at_html": "可提供 <strong>{{ location_name }}</strong> 的取貨服務",
+      "pick_up_unavailable_at_html": "目前無法提供 <strong>{{ location_name }}</strong> 的取貨服務",
+      "confirm_address": "聯絡商店以確認地址"
     }
   }
 }

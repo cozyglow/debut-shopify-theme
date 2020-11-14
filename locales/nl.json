@@ -135,9 +135,8 @@
       "back_to_blog": "Terug naar {{ title }}",
       "tags": "Tags",
       "article_with_count": {
-        "one": "1 artikel",
-        "other": "{{ count }} artikelen",
-        "zero": "0 artikelen"
+        "one": "{{ count }} artikel",
+        "other": "{{ count }} artikelen"
       }
     },
     "comments": {
@@ -256,7 +255,7 @@
       "last_name": "Achternaam",
       "company": "Bedrijf",
       "address1": "Adres",
-      "address2": "Appertementnr. etc.",
+      "address2": "Appartementnr. etc.",
       "city": "Stad",
       "country": "Land/regio",
       "province": "Provincie",
@@ -409,6 +408,17 @@
       "remaining_html": "{{ balance }} over",
       "add_to_apple_wallet": "Aan Apple Wallet toevoegen",
       "qr_image_alt": "QR-code — scannen om cadeaubon te verzilveren"
+    }
+  },
+  "store_availability": {
+    "general": {
+      "view_store_info": "Winkelgegevens bekijken",
+      "check_other_stores": "Controleer de beschikbaarheid van andere winkels",
+      "pick_up_available": "Afhaling is beschikbaar",
+      "pick_up_currently_unavailable": "Afhaling is momenteel niet beschikbaar",
+      "pick_up_available_at_html": "Afhaling is beschikbaar bij <strong>{{ location_name }}</strong>",
+      "pick_up_unavailable_at_html": "Afhaling is momenteel niet beschikbaar bij <strong>{{ location_name }}</strong>",
+      "confirm_address": "Neem contact op met de winkel om het adres te bevestigen"
     }
   }
 }

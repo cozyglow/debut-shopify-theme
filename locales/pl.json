@@ -139,9 +139,8 @@
       "back_to_blog": "Powrót do {{ title }}",
       "tags": "Tagi",
       "article_with_count": {
-        "one": "1 artykuł",
+        "one": "{{ count }} artykuł",
         "other": "{{ count }} artykuły(-ów)",
-        "zero": "0 artykułów",
         "few": "{{ count }} artykuły(-ów)",
         "many": "{{ count }} artykuły(-ów)"
       }
@@ -423,6 +422,17 @@
       "remaining_html": "{{ balance }} lewo",
       "add_to_apple_wallet": "Dodaj do Apple Wallet",
       "qr_image_alt": "Kod QR — zeskanuj, aby wykorzystać kartę prezentową"
+    }
+  },
+  "store_availability": {
+    "general": {
+      "view_store_info": "Pokaż informacje o sklepie",
+      "check_other_stores": "Sprawdź dostępność w innych sklepach",
+      "pick_up_available": "Odbiór jest możliwy",
+      "pick_up_currently_unavailable": "Odbiór jest obecnie niemożliwy",
+      "pick_up_available_at_html": "Odbiór możliwy w <strong>{{ location_name }}</strong>",
+      "pick_up_unavailable_at_html": "Odbiór w <strong>{{ location_name }}</strong> jest obecnie niemożliwy",
+      "confirm_address": "Skontaktuj się ze sklepem, aby potwierdzić adres"
     }
   }
 }

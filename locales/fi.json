@@ -135,9 +135,8 @@
       "back_to_blog": "Takaisin kohteeseen {{ title }}",
       "tags": "Tunnisteet",
       "article_with_count": {
-        "one": "1 artikkeli",
-        "other": "{{ count }} artikkelia",
-        "zero": "0 artikkelia"
+        "one": "{{ count }} artikkeli",
+        "other": "{{ count }} artikkelia"
       }
     },
     "comments": {
@@ -409,6 +408,17 @@
       "remaining_html": "{{ balance }} vasen",
       "add_to_apple_wallet": "Lisää Apple Walletiin",
       "qr_image_alt": "QR-koodi – lunasta lahjakortti skannaamalla"
+    }
+  },
+  "store_availability": {
+    "general": {
+      "view_store_info": "Näytä kaupan tiedot",
+      "check_other_stores": "Tarkista saatavuus muista kaupoista",
+      "pick_up_available": "Nouto saatavilla",
+      "pick_up_currently_unavailable": "Nouto ei ole tällä hetkellä saatavilla",
+      "pick_up_available_at_html": "Nouto saatavilla paikassa <strong>{{ location_name }}</strong>",
+      "pick_up_unavailable_at_html": "Nouto ei ole tällä hekellä saatavilla paikassa <strong>{{ location_name }}</strong>",
+      "confirm_address": "Ota yhteyttä kauppaan vahvistaaksesi osoitteen"
     }
   }
 }

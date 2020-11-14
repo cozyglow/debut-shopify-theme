@@ -158,8 +158,7 @@
       "back_to_blog": "Επιστροφή σε {{ title }}",
       "tags": "Ετικέτες",
       "article_with_count": {
-        "zero": "0 άρθρα",
-        "one": "1 άρθρο",
+        "one": "{{ count }} άρθρο",
         "other": "{{ count }} άρθρα"
       }
     },
@@ -409,6 +408,17 @@
       "remaining_html": "{{ balance }} ακόμη",
       "add_to_apple_wallet": "Προσθήκη στο Apple Wallet",
       "qr_image_alt": "Κωδικός QR — σαρώστε για να εξαργυρώσετε τη δωροκάρτα"
+    }
+  },
+  "store_availability": {
+    "general": {
+      "view_store_info": "Προβολή πληροφοριών καταστήματος",
+      "check_other_stores": "Έλεγχος διαθεσιμότητας σε άλλα καταστήματα",
+      "pick_up_available": "Υπάρχει δυνατότητα παραλαβής",
+      "pick_up_currently_unavailable": "Δεν υπάρχει δυνατότητα παραλαβής",
+      "pick_up_available_at_html": "Υπάρχει δυνατότητα παραλαβής από <strong>{{ location_name }}</strong>",
+      "pick_up_unavailable_at_html": "Δεν υπάρχει δυνατότητα παραλαβής από <strong>{{ location_name }}</strong>",
+      "confirm_address": "Επικοινωνήστε με το κατάστημα για να επιβεβαιώσετε τη διεύθυνση"
     }
   }
 }

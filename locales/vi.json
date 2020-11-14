@@ -135,8 +135,7 @@
       "back_to_blog": "Quay lại {{ title }}",
       "tags": "Thẻ",
       "article_with_count": {
-        "zero": "0 bài viết",
-        "one": "1 bài viết",
+        "one": "{{ count }} bài viết",
         "other": "{{ count }} bài viết"
       }
     },
@@ -251,7 +250,7 @@
       "title": "Địa chỉ của bạn",
       "default": "Mặc định",
       "add_new": "Thêm địa chỉ mới",
-      "edit_address": "Chỉnh sửa địa chỉ",
+      "edit_address": "Sửa địa chỉ",
       "first_name": "Tên",
       "last_name": "Họ",
       "company": "Công ty",
@@ -266,7 +265,7 @@
       "add": "Thêm địa chỉ",
       "update": "Cập nhật địa chỉ",
       "cancel": "Hủy",
-      "edit": "Chỉnh sửa",
+      "edit": "Sửa",
       "delete": "Xóa",
       "delete_confirm": "Bạn có chắc chắn muốn xóa địa chỉ này không?"
     },
@@ -409,6 +408,17 @@
       "remaining_html": "Còn {{ balance }}",
       "add_to_apple_wallet": "Thêm vào Apple Wallet",
       "qr_image_alt": "Mã QR — quét để đổi thẻ quà tặng"
+    }
+  },
+  "store_availability": {
+    "general": {
+      "view_store_info": "Xem thông tin cửa hàng",
+      "check_other_stores": "Kiểm tra tình trạng còn hàng tại các cửa hàng khác",
+      "pick_up_available": "Đã có dịch vụ nhận hàng",
+      "pick_up_currently_unavailable": "Hiện chưa có dịch vụ nhận hàng",
+      "pick_up_available_at_html": "Đã có dịch vụ nhận hàng tại <strong>{{ location_name }}</strong>",
+      "pick_up_unavailable_at_html": "Hiện chưa có dịch vụ nhận hàng tại <strong>{{ location_name }}</strong>",
+      "confirm_address": "Liên hệ với cửa hàng để xác nhận địa chỉ"
     }
   }
 }

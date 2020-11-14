@@ -35,6 +35,31 @@
               <th class="order-table__product" scope="row" data-label="{{ 'customer.order.product' | t }}">
                 <div>
                   {{ line_item.title | link_to: line_item.product.url }}
+                  {%- assign property_size = line_item.properties | size -%}
+                  {% unless line_item.selling_plan_allocation == nil and property_size == 0 %}
+                    <div class="item-props">
+                      {% unless line_item.selling_plan_allocation == nil  %}
+                        <span class="item-props__property">
+                          {{ line_item.selling_plan_allocation.selling_plan.name }}
+                        </span>
+                      {% endunless %}
+                      {% if property_size != 0 %}
+                        {% for property in line_item.properties %}
+                          {% assign property_first_char = property.first | slice: 0 %}
+                          {% if property.last != blank and property_first_char != '_' %}
+                            <span class="item-props__property">
+                              {{ property.first }}:&nbsp;
+                              {%- if property.last contains '/uploads/' -%}
+                                <a href="{{ property.last }}">{{ property.last | split: '/' | last }}</a>
+                              {%- else -%}
+                                {{ property.last }}
+                              {%- endif -%}
+                            </span>
+                          {% endif %}
+                        {% endfor %}
+                      {% endif %}
+                    </div>
+                  {% endunless %}
                   {%- if line_item.line_level_discount_allocations != blank -%}
                     <ul class="order-discount order-discount--list order-discount--title" aria-label="{{ 'customer.order.discount' | t }}">
                       {%- for discount_allocation in line_item.line_level_discount_allocations -%}

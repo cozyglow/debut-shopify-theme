@@ -135,9 +135,8 @@
       "back_to_blog": "Torna a {{ title }}",
       "tags": "Tag",
       "article_with_count": {
-        "one": "1 articolo",
-        "other": "{{ count }} articoli",
-        "zero": "0 articoli"
+        "one": "{{ count }} articolo",
+        "other": "{{ count }} articoli"
       }
     },
     "comments": {
@@ -409,6 +408,17 @@
       "remaining_html": "{{ balance }} rimasti",
       "add_to_apple_wallet": "Aggiungi a Apple Wallet",
       "qr_image_alt": "Codice QR: scansiona per riscattare la carta regalo"
+    }
+  },
+  "store_availability": {
+    "general": {
+      "view_store_info": "Visualizza i dettagli del negozio",
+      "check_other_stores": "Verifica la disponibilità in altri negozi",
+      "pick_up_available": "Ritiro disponibile",
+      "pick_up_currently_unavailable": "Ritiro attualmente non disponibile",
+      "pick_up_available_at_html": "Ritiro disponibile presso <strong>{{ location_name }}</strong>",
+      "pick_up_unavailable_at_html": "Ritiro presso <strong>{{ location_name }}</strong> attualmente non disponibile",
+      "confirm_address": "Contatta il negozio per confermare l'indirizzo"
     }
   }
 }

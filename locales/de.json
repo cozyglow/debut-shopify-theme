@@ -135,9 +135,8 @@
       "back_to_blog": "Zurück zu {{ title }}",
       "tags": "Stichworte",
       "article_with_count": {
-        "one": "1 Artikel",
-        "other": "{{ count }} Artikel",
-        "zero": "0 Artikel"
+        "one": "{{ count }} Artikel",
+        "other": "{{ count }} Artikel"
       }
     },
     "comments": {
@@ -409,6 +408,17 @@
       "remaining_html": "{{ balance }} übrig",
       "add_to_apple_wallet": "Hinzufügen zu Apple Wallet",
       "qr_image_alt": "QR-Code — Scannen, um Geschenkgutschein einzulösen"
+    }
+  },
+  "store_availability": {
+    "general": {
+      "view_store_info": "Shop-Informationen anzeigen",
+      "check_other_stores": "Verfügbarkeit in anderen Shops überprüfen",
+      "pick_up_available": "Abholung verfügbar",
+      "pick_up_currently_unavailable": "Abholung derzeit nicht verfügbar",
+      "pick_up_available_at_html": "Abholung bei <strong>{{ location_name }}</strong> verfügbar",
+      "pick_up_unavailable_at_html": "Abholung bei <strong>{{ location_name }}</strong> derzeit nicht verfügbar",
+      "confirm_address": "Zur Adressbestätigung Shop kontaktieren"
     }
   }
 }

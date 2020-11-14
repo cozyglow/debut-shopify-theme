@@ -3623,6 +3623,14 @@ hr {
     display: flex;
     justify-content: space-between; } }
 
+.item-props {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column; }
+
+.item-props__property {
+  font-size: calc(((var(--font-size-base) - 2) / (var(--font-size-base))) * 1em); }
+
 .order-discount {
   color: var(--color-sale-text);
   display: block;
@@ -4176,9 +4184,6 @@ hr {
   line-height: 1.5; }
   .product-details__item:last-child {
     margin-bottom: 0; }
-
-.product-details__item--variant-option + .product-details__item--property {
-  margin-top: 0.8rem; }
 
 .product-details__property-label {
   font-weight: var(--font-weight-body--bold); }
@@ -6881,3 +6886,119 @@ hr {
       padding-bottom: 0; }
       .selectors-form__item:first-of-type {
         margin-left: 0; } }
+
+.store-availability-small-text {
+  font-size: calc(((var(--font-size-base) - 2) / (var(--font-size-base))) * 1em); }
+
+.store-availability-information {
+  display: flex;
+  margin-left: 5px; }
+
+.store-availability-information-container {
+  margin-left: 5px; }
+
+.store-availability-information__title {
+  margin-bottom: 0; }
+
+.store-availability-information__stock {
+  margin-bottom: 0; }
+
+.store-availability-information__button {
+  text-decoration: underline;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  background: transparent;
+  margin-top: 8px; }
+
+.store-availability-container .icon {
+  width: 12px;
+  height: 12px;
+  margin: 4px 4px 0 0; }
+
+.store-availability-container .icon-in-stock {
+  fill: #00730B; }
+
+.store-availability-container .icon-out-of-stock {
+  fill: #DD2200; }
+
+.store-availability-container .icon-close {
+  width: 18px;
+  height: 18px;
+  margin: 0; }
+
+.store-availability-container .store-availability-list__stock .icon {
+  margin: 0 2px 3px 0; }
+
+.store-availability-container .store-availability-list__confirm-address .icon-unverified-address {
+  margin: 0 0 3px 0; }
+  .store-availability-container .store-availability-list__confirm-address .icon-unverified-address .icon-unverified-address__exclamation {
+    fill: var(--color-body-text); }
+  .store-availability-container .store-availability-list__confirm-address .icon-unverified-address .icon-unverified-address__circle {
+    stroke: var(--color-body-text);
+    fill: transparent; }
+
+.store-availabilities-modal {
+  z-index: 3;
+  width: 375px;
+  left: auto;
+  border: 1px solid var(--color-border);
+  box-sizing: border-box;
+  box-shadow: -4px 4px 6px rgba(58, 58, 58, 0.04); }
+
+.store-availabilities-modal--active {
+  display: flex;
+  flex-direction: column;
+  transform: translateY(0);
+  opacity: 1; }
+  @media only screen and (max-width: 749px) {
+    .store-availabilities-modal--active {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 9999; } }
+
+.store-availabilities-modal__header {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 0 16px 0;
+  padding: 0 24px 0 24px; }
+
+.store-availabilities-modal__product-title {
+  font-size: calc(((var(--font-size-base) + 2) / (var(--font-size-base))) * 1em);
+  text-transform: none;
+  margin-bottom: 0;
+  letter-spacing: 0; }
+
+.store-availabilities-list {
+  overflow-y: auto;
+  padding: 0 20px 0 20px; }
+
+.store-availabilities-modal__close {
+  margin: -14px -14px 0 0;
+  padding: 14px;
+  align-self: start; }
+
+.store-availability-list__item {
+  padding-bottom: 16px; }
+  .store-availability-list__item::before {
+    content: "";
+    display: block;
+    margin: 0 0 16px 0;
+    border-bottom: 1px solid var(--color-border); }
+
+.store-availability-list__address {
+  font-size: calc(((var(--font-size-base) - 2) / (var(--font-size-base))) * 1em);
+  font-style: normal;
+  margin-bottom: 0; }
+
+.store-availability-list__location {
+  font-size: var(--font-size-base);
+  margin-bottom: 8px; }
+
+.store-availability-list__stock {
+  margin-top: 8px;
+  margin-bottom: 16px; }
+
+.store-availability-list__phone {
+  margin-bottom: 0; }

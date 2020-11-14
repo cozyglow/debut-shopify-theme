@@ -162,8 +162,7 @@
       "back_to_blog": "Nazaj na {{ title }}",
       "tags": "Oznake",
       "article_with_count": {
-        "zero": "0 člankov",
-        "one": "1 članek",
+        "one": "{{ count }} članek",
         "other": "Toliko člankov: {{ count }}",
         "few": "Toliko člankov: {{ count }}",
         "two": "Toliko člankov: {{ count }}"
@@ -423,6 +422,17 @@
       "remaining_html": "Preostali znesek: {{ balance }}",
       "add_to_apple_wallet": "Dodaj v Apple Wallet",
       "qr_image_alt": "Koda QR – preberite jo za unovčenje darilnega bona"
+    }
+  },
+  "store_availability": {
+    "general": {
+      "view_store_info": "Prikaži podatke o trgovini",
+      "check_other_stores": "Preverjanje razpoložljivosti v drugih trgovinah",
+      "pick_up_available": "Na voljo je osebni prevzem",
+      "pick_up_currently_unavailable": "Osebni prevzem trenutno ni na voljo",
+      "pick_up_available_at_html": "Osebni prevzem je mogoč na prevzemnem mestu <strong>{{ location_name }}</strong>",
+      "pick_up_unavailable_at_html": "Na prevzemnem mestu <strong>{{ location_name }}</strong> osebni prevzem trenutno ni mogoč",
+      "confirm_address": "Za potrditev naslova se obrnite na trgovino"
     }
   }
 }

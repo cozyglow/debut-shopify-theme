@@ -139,8 +139,7 @@
       "back_to_blog": "Вернуться к {{ title }}",
       "tags": "Теги",
       "article_with_count": {
-        "zero": "Статей нет",
-        "one": "1 статья",
+        "one": "{{ count }} статья",
         "other": "Статей: {{ count }}",
         "few": "Статей: {{ count }}",
         "many": "Статей: {{ count }}"
@@ -423,6 +422,17 @@
       "remaining_html": "Осталось: {{ balance }}",
       "add_to_apple_wallet": "Добавить в Apple Wallet",
       "qr_image_alt": "Отсканируйте QR-код, чтобы использовать подарочную карту"
+    }
+  },
+  "store_availability": {
+    "general": {
+      "view_store_info": "Сведения о магазине",
+      "check_other_stores": "Проверить наличие в других магазинах",
+      "pick_up_available": "Самовывоз доступен",
+      "pick_up_currently_unavailable": "Самовывоз сейчас недоступен",
+      "pick_up_available_at_html": "Самовывоз доступен: <strong>{{ location_name }}</strong>",
+      "pick_up_unavailable_at_html": "Самовывоз сейчас недоступен: <strong>{{ location_name }}</strong>",
+      "confirm_address": "Обратитесь в магазин, чтобы подтвердить адрес"
     }
   }
 }

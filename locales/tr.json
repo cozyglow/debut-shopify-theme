@@ -135,9 +135,8 @@
       "back_to_blog": "Geri dön: {{ title }}",
       "tags": "Etiketler",
       "article_with_count": {
-        "one": "1 makale",
-        "other": "{{ count }} makale",
-        "zero": "0 makale"
+        "one": "{{ count }} makale",
+        "other": "{{ count }} makale"
       }
     },
     "comments": {
@@ -202,7 +201,7 @@
   "collections": {
     "general": {
       "view_all": "Tümünü görüntüle",
-      "view_all_label": "{{ collection_name }} koleksiyonunda tüm ürünleri görüntüle",
+      "view_all_label": "{{ collection_name }} koleksiyonundaki tüm ürünleri görüntüle",
       "no_matches": "Üzgünüz, bu koleksiyonda ürün yok",
       "items_with_count": {
         "one": "{{ count }} ürün",
@@ -409,6 +408,17 @@
       "remaining_html": "{{ balance }} kaldı",
       "add_to_apple_wallet": "Apple Wallet'a ekle",
       "qr_image_alt": "QR kodu: Hediye kartını kullanmak için tarayın"
+    }
+  },
+  "store_availability": {
+    "general": {
+      "view_store_info": "Mağaza bilgilerini görüntüle",
+      "check_other_stores": "Diğer mağazalardaki kullanılabilirliği kontrol et",
+      "pick_up_available": "Teslim alım kullanılabilir",
+      "pick_up_currently_unavailable": "Teslim alım şu anda kullanılamıyor",
+      "pick_up_available_at_html": "Teslim alım <strong>{{ location_name }}</strong> konumunda kullanılabilir",
+      "pick_up_unavailable_at_html": "Teslim alım <strong>{{ location_name }}</strong> konumunda şu anda kullanılamıyor",
+      "confirm_address": "Adresi doğrulamak için mağazayla iletişime geçin"
     }
   }
 }

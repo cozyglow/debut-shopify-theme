@@ -160,8 +160,7 @@
       "back_to_blog": "Înapoi la {{ title }}",
       "tags": "Etichete",
       "article_with_count": {
-        "zero": "0 articole",
-        "one": "1 articol",
+        "one": "{{ count }} articol",
         "other": "{{ count }} articole",
         "few": "{{ count }} articole"
       }
@@ -416,6 +415,17 @@
       "remaining_html": "{{ balance }} rămas",
       "add_to_apple_wallet": "Adaugă la Apple Wallet",
       "qr_image_alt": "Cod QR – scanează pentru valorificarea cardului cadou"
+    }
+  },
+  "store_availability": {
+    "general": {
+      "view_store_info": "Vezi informațiile despre magazin",
+      "check_other_stores": "Vezi disponibilitatea la alte magazine",
+      "pick_up_available": "Ridicare disponibilă",
+      "pick_up_currently_unavailable": "Ridicare indisponibilă momentan",
+      "pick_up_available_at_html": "Ridicare disponibilă la <strong>{{ location_name }}</strong>",
+      "pick_up_unavailable_at_html": "Ridicare indisponibilă momentan la <strong>{{ location_name }}</strong>",
+      "confirm_address": "Contactează magazinul pentru a confirma adresa"
     }
   }
 }
