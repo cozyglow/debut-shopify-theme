@@ -135,8 +135,7 @@
       "back_to_blog": "Back to {{ title }}",
       "tags": "Tags",
       "article_with_count": {
-        "zero": "0 articles",
-        "one": "1 article",
+        "one": "{{ count }} article",
         "other": "{{ count }} articles"
       }
     },
@@ -398,6 +397,17 @@
       "view_cart": "View cart",
       "view_in_space": "View in your space",
       "view_in_space_label": "View in your space, loads item in augmented reality window"
+    }
+  },
+  "store_availability": {
+    "general": {
+      "view_store_info": "View store information",
+      "check_other_stores": "Check availability at other stores",
+      "pick_up_available": "Pickup available",
+      "pick_up_currently_unavailable": "Pickup currently unavailable",
+      "pick_up_available_at_html": "Pickup available at <strong>{{ location_name }}</strong>",
+      "pick_up_unavailable_at_html": "Pickup currently unavailable at <strong>{{ location_name }}</strong>",
+      "confirm_address": "Contact store to confirm address"
     }
   },
   "gift_cards": {

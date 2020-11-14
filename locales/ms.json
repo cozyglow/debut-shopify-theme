@@ -135,9 +135,8 @@
       "back_to_blog": "Kembali kepada {{ title }}",
       "tags": "Tag",
       "article_with_count": {
-        "one": "1 artikel",
-        "other": "{{ count }} artikel",
-        "zero": "0 artikel"
+        "one": "{{ count }} artikel",
+        "other": "{{ count }} artikel"
       }
     },
     "comments": {
@@ -409,6 +408,17 @@
       "remaining_html": "{{ balance }} berbaki",
       "add_to_apple_wallet": "Tambah ke Apple Wallet",
       "qr_image_alt": "Kod QR — imbas untuk menebus kad hadiah"
+    }
+  },
+  "store_availability": {
+    "general": {
+      "view_store_info": "Lihat maklumat kedai",
+      "check_other_stores": "Periksa ketersediaan di kedai lain",
+      "pick_up_available": "Kutipan tersedia",
+      "pick_up_currently_unavailable": "Kutipan tidak tersedia pada masa ini",
+      "pick_up_available_at_html": "Kutipan tersedia di <strong>{{ location_name }}</strong>",
+      "pick_up_unavailable_at_html": "Kutipan tidak tersedia pada masa ini di <strong>{{ location_name }}</strong>",
+      "confirm_address": "Hubungi kedai untuk mengesahkan alamat"
     }
   }
 }

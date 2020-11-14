@@ -135,9 +135,8 @@
       "back_to_blog": "Tilbake til {{ title }}",
       "tags": "Merker",
       "article_with_count": {
-        "one": "1 artikkel",
-        "other": "{{ count }} artikler",
-        "zero": "0 artikler"
+        "one": "{{ count }} artikkel",
+        "other": "{{ count }} artikler"
       }
     },
     "comments": {
@@ -409,6 +408,17 @@
       "remaining_html": "{{ balance }} igjen",
       "add_to_apple_wallet": "Legg til i Apple Wallet",
       "qr_image_alt": "QR-kode – skann for å løse inn gavekortet"
+    }
+  },
+  "store_availability": {
+    "general": {
+      "view_store_info": "Vis butikkinformasjon",
+      "check_other_stores": "Sjekk tilgjengelighet i andre butikker",
+      "pick_up_available": "Henting tilgjengelig",
+      "pick_up_currently_unavailable": "Henting er ikke tilgjengelig for øyeblikket",
+      "pick_up_available_at_html": "Henting tilgjengelig hos <strong>{{ location_name }}</strong>",
+      "pick_up_unavailable_at_html": "Henting er ikke tilgjengelig for øyeblikket hos <strong>{{ location_name }}</strong>",
+      "confirm_address": "Kontakt butikken for å bekrefte adressen"
     }
   }
 }

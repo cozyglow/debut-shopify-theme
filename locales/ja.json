@@ -78,7 +78,7 @@
       "submit": "登録する"
     },
     "filters": {
-      "show_more": "表示を増やす",
+      "show_more": "さらに表示する",
       "show_less": "表示を減らす"
     },
     "payment": {
@@ -135,9 +135,8 @@
       "back_to_blog": "{{ title }}に戻る",
       "tags": "タグ",
       "article_with_count": {
-        "one": "記事1件",
-        "other": "記事{{ count }}件",
-        "zero": "記事0件"
+        "one": "記事{{ count }}件",
+        "other": "記事{{ count }}件"
       }
     },
     "comments": {
@@ -409,6 +408,17 @@
       "remaining_html": "残り{{ balance }}使用可能です",
       "add_to_apple_wallet": "Apple Walletに追加する",
       "qr_image_alt": "QRコード - スキャンしてギフトカードを引き換える"
+    }
+  },
+  "store_availability": {
+    "general": {
+      "view_store_info": "ストア情報を表示する",
+      "check_other_stores": "別のストアでの出品状況を確認する",
+      "pick_up_available": "受取が可能です",
+      "pick_up_currently_unavailable": "受取は現在できません",
+      "pick_up_available_at_html": "<strong>{{ location_name }}</strong>での受取が可能です",
+      "pick_up_unavailable_at_html": "<strong>{{ location_name }}</strong>での受取は現在できません",
+      "confirm_address": "ストアに連絡して住所を確認する"
     }
   }
 }

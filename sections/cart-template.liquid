@@ -45,10 +45,18 @@
                     {%- endif -%}
                     {%- assign property_size = item.properties | size -%}
 
-                    <ul class="product-details{% if item.product.has_only_default_variant and property_size == 0 %} hide{% endif %}" data-cart-item-details aria-label="{{ 'cart.label.product_details' | t }}">
+                    <ul class="product-details{% if item.product.has_only_default_variant and property_size == 0 and item.selling_plan_allocation == nil %} hide{% endif %}" data-cart-item-details aria-label="{{ 'cart.label.product_details' | t }}">
                       {%- for option in variant_options -%}
                         <li class="product-details__item product-details__item--variant-option{% if item.product.has_only_default_variant %} hide{% endif %}" data-cart-item-option>{{ option.name }}: {{ option.value }}</li>
                       {%- endfor -%}
+
+                      <li
+                        class="product-details__item product-details__item--property
+                        {% if item.selling_plan_allocation == empty %} hide {% endif %}"
+                        data-cart-item-selling-plan-name
+                      >
+                        {{ item.selling_plan_allocation.selling_plan.name }}
+                      </li>
 
                       {%- comment -%}
                         Optional, loop through custom product line items if available
@@ -66,22 +74,22 @@
                       {%- endif -%}
 
                       {%- for p in properties -%}
-                        {%- unless p.last == blank -%}
-                          <li class="product-details__item product-details__item--property{%if property_size == 0%} hide{% endif %}" data-cart-item-property>
-                            <span class="product-details__item-label" data-cart-item-property-name>{{ p.first }}: </span>
+                        {% assign property_first_char = p.first | slice: 0 %}
+                        <li class="product-details__item product-details__item--property
+                          {%if property_size == 0 or p.last == blank or property_first_char == '_' %} hide{% endif %}" data-cart-item-property>
+                          <span class="product-details__item-label" data-cart-item-property-name>{{ p.first }}: </span>
 
-                            {%- comment -%}
-                              Check if there was an uploaded file associated
-                            {%- endcomment -%}
-                            <span data-cart-item-property-value>
-                              {%- if p.last contains '/uploads/' -%}
-                                <a href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
-                              {%- else -%}
-                                {{ p.last }}
-                              {%- endif -%}
-                            </span>
-                          </li>
-                        {%- endunless -%}
+                          {%- comment -%}
+                            Check if there was an uploaded file associated
+                          {%- endcomment -%}
+                          <span data-cart-item-property-value>
+                            {%- if p.last contains '/uploads/' -%}
+                              <a href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
+                            {%- else -%}
+                              {{ p.last }}
+                            {%- endif -%}
+                          </span>
+                        </li>
                       {%- endfor -%}
                     </ul>
 
@@ -329,7 +337,6 @@
     "es": "Página del carrito de compras",
     "fi": "Ostoskorisivu",
     "fr": "Page du panier",
-    "hi": "कार्ट पेज",
     "it": "Pagina del carrello",
     "ja": "カートページ",
     "ko": "카트 페이지",
@@ -357,7 +364,6 @@
         "es": "Habilitar las actualizaciones automáticas del carrito de compra",
         "fi": "Ota automaattinen ostoskorin päivitykset käyttöön",
         "fr": "Activer les mises à jour automatiques",
-        "hi": "स्वचालित कार्ट अपडेट सक्षम करें",
         "it": "Abilita aggiornamenti automatici carrello",
         "ja": "自動カートの更新を有効にする",
         "ko": "자동 카트 업데이트 활성화하기",
@@ -381,7 +387,6 @@
         "es": "Actualiza el carrito de compra tan pronto como el cliente realice cambios",
         "fi": "Päivittää ostoskorin heti, kun asiakkaan muutokset on tehty",
         "fr": "Mise à jour du panier dès que les modifications apportées aux clients ont été effectuées",
-        "hi": "ग्राहक के द्वारा परिवर्तन करते ही कार्ट को अपडेट हो जाता है",
         "it": "Aggiorna il carrello appena il cliente apporta le modifiche",
         "ja": "お客様が変更されるとすぐにカートを更新します",
         "ko": "고객 변경 시 카트를 업데이트합니다.",
@@ -410,7 +415,6 @@
         "es": "Habilitar notas del carrito de compra",
         "fi": "Ota tilauskommentit käyttöön",
         "fr": "Activer les notes de panier",
-        "hi": "कार्ट नोट्स सक्षम करें",
         "it": "Abilita note carrello",
         "ja": "カートメモを有効にする",
         "ko": "카트 참고 사항 사용",

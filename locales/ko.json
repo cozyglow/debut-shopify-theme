@@ -135,9 +135,8 @@
       "back_to_blog": "{{ title }} 로 돌아가기",
       "tags": "태그",
       "article_with_count": {
-        "one": "1개 기사",
-        "other": "{{ count }} 기사",
-        "zero": "문서 0개"
+        "one": "문서 {{ count }}개",
+        "other": "{{ count }} 기사"
       }
     },
     "comments": {
@@ -409,6 +408,17 @@
       "remaining_html": "{{ balance }} 왼쪽",
       "add_to_apple_wallet": "Apple Wallet에 추가",
       "qr_image_alt": "QR 코드 — 스캔하여 기프트 카드 현금화"
+    }
+  },
+  "store_availability": {
+    "general": {
+      "view_store_info": "스토어 정보 보기",
+      "check_other_stores": "다른 스토어 사용 가능 여부 확인",
+      "pick_up_available": "픽업을 사용할 수 있습니다.",
+      "pick_up_currently_unavailable": "현재 픽업을 사용할 수 없습니다.",
+      "pick_up_available_at_html": "<strong>{{ location_name }}</strong>에서 픽업을 사용할 수 있습니다.",
+      "pick_up_unavailable_at_html": "<strong>{{ location_name }}</strong>에서는 현재 픽업을 사용할 수 없습니다.",
+      "confirm_address": "스토어에 연락하여 주소 확인하기"
     }
   }
 }

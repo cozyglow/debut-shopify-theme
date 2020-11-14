@@ -158,8 +158,7 @@
       "back_to_blog": "Назад към {{ title }}",
       "tags": "Етикети",
       "article_with_count": {
-        "zero": "0 артикула",
-        "one": "1 артикул",
+        "one": "{{ count }} артикул",
         "other": "{{ count }} артикула"
       }
     },
@@ -409,6 +408,17 @@
       "remaining_html": "Оставаща стойност: {{ balance }}",
       "add_to_apple_wallet": "Добавяне към Apple Wallet",
       "qr_image_alt": "QR код – сканирайте го, зада използвате ваучера за подарък"
+    }
+  },
+  "store_availability": {
+    "general": {
+      "view_store_info": "Вижте информация за магазина",
+      "check_other_stores": "Проверка за наличност в други магазини",
+      "pick_up_available": "Възможност за взимане",
+      "pick_up_currently_unavailable": "В момента няма възможност за взимане",
+      "pick_up_available_at_html": "Възможност за взимане от <strong>{{ location_name }}</strong>",
+      "pick_up_unavailable_at_html": "В момента няма възможност за взимане от <strong>{{ location_name }}</strong>",
+      "confirm_address": "Свържете се с магазина, за да потвърдите адреса"
     }
   }
 }

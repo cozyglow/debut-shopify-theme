@@ -135,9 +135,8 @@
       "back_to_blog": "Tilbage til {{ title }}",
       "tags": "Tags",
       "article_with_count": {
-        "one": "1 artikel",
-        "other": "{{ count }} artikler",
-        "zero": "0 artikler"
+        "one": "{{ count }} artikel",
+        "other": "{{ count }} artikler"
       }
     },
     "comments": {
@@ -409,6 +408,17 @@
       "remaining_html": "{{ balance }} tilbage",
       "add_to_apple_wallet": "Tilføj til Apple Wallet",
       "qr_image_alt": "QR-kode — scan for at indløse gavekort"
+    }
+  },
+  "store_availability": {
+    "general": {
+      "view_store_info": "Se butiksoplysninger",
+      "check_other_stores": "Kontrollér tilgængelighed i andre butikker",
+      "pick_up_available": "Afhentning er tilgængeligt",
+      "pick_up_currently_unavailable": "Afhentning er ikke tilgængeligt i øjeblikket",
+      "pick_up_available_at_html": "Afhentning er tilgængelig for <strong>{{ location_name }}</strong>",
+      "pick_up_unavailable_at_html": "Afhentning er ikke tilgængelig for <strong>{{ location_name }}</strong> i øjeblikket",
+      "confirm_address": "Kontakt butikken for at bekræfte adressen"
     }
   }
 }

@@ -139,9 +139,8 @@
       "back_to_blog": "Zpět do {{ title }}",
       "tags": "Štítky",
       "article_with_count": {
-        "one": "1 článek",
+        "one": "{{ count }} článek",
         "other": "Počet článků: {{ count }}",
-        "zero": "0 článků",
         "few": "Počet článků: {{ count }}",
         "many": "Počet článků: {{ count }}"
       }
@@ -423,6 +422,17 @@
       "remaining_html": "{{ balance }} zbývá",
       "add_to_apple_wallet": "Přidat do Apple Wallet",
       "qr_image_alt": "QR kód — naskenováním uplatníte svou dárkovou kartu"
+    }
+  },
+  "store_availability": {
+    "general": {
+      "view_store_info": "Zobrazit informace o obchodě",
+      "check_other_stores": "Zkontrolovat dostupnost v ostatních obchodech",
+      "pick_up_available": "Vyzvednutí k dispozici",
+      "pick_up_currently_unavailable": "Vyzvednutí není momentálně k dispozici",
+      "pick_up_available_at_html": "Vyzvednutí k dispozici v lokalitě <strong>{{ location_name }}</strong>",
+      "pick_up_unavailable_at_html": "Vyzvednutí není momentálně v lokalitě <strong>{{ location_name }}</strong> k dispozici",
+      "confirm_address": "Kontaktujte obchod a potvrďte adresu"
     }
   }
 }

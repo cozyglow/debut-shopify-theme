@@ -135,9 +135,8 @@
       "back_to_blog": "Gå tillbaka till {{ title }}",
       "tags": "Taggar",
       "article_with_count": {
-        "one": "1 artikel",
-        "other": "{{ count }} artiklar",
-        "zero": "0 artiklar"
+        "one": "{{ count }} artikel",
+        "other": "{{ count }} artiklar"
       }
     },
     "comments": {
@@ -409,6 +408,17 @@
       "remaining_html": "{{ balance }} kvar",
       "add_to_apple_wallet": "Lägg till i Apple Wallet",
       "qr_image_alt": "QR-kod – skanna för att lösa in presentkort"
+    }
+  },
+  "store_availability": {
+    "general": {
+      "view_store_info": "Visa butiksinformation",
+      "check_other_stores": "Kontrollerar tillgänglighet i andra butiker",
+      "pick_up_available": "Hämtning tillgänglig",
+      "pick_up_currently_unavailable": "Hämtning är för närvarande inte tillgängligt",
+      "pick_up_available_at_html": "Hämtning tillgänglig på <strong>{{ location_name }}</strong>",
+      "pick_up_unavailable_at_html": "Hämtning är för närvarande inte tillgängligt på <strong>{{ location_name }}</strong>",
+      "confirm_address": "Kontakta butik för att bekräfta adress"
     }
   }
 }

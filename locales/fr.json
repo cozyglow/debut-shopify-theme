@@ -135,9 +135,8 @@
       "back_to_blog": "Retour à {{ title }}",
       "tags": "Balises",
       "article_with_count": {
-        "one": "1 article",
-        "other": "{{ count }} articles",
-        "zero": "0 articles"
+        "one": "{{ count }} article",
+        "other": "{{ count }} articles"
       }
     },
     "comments": {
@@ -409,6 +408,17 @@
       "remaining_html": "{{ balance }} restants",
       "add_to_apple_wallet": "Ajouter à Apple Wallet",
       "qr_image_alt": "code QR - scannez pour réclamer votre carte-cadeau"
+    }
+  },
+  "store_availability": {
+    "general": {
+      "view_store_info": "Afficher les informations de la boutique",
+      "check_other_stores": "Vérifier la disponibilité dans d'autres boutiques",
+      "pick_up_available": "Ramassage disponible",
+      "pick_up_currently_unavailable": "Ramassage actuellement indisponible",
+      "pick_up_available_at_html": "Ramassage disponible à <strong>{{ location_name }}</strong>",
+      "pick_up_unavailable_at_html": "Ramassage actuellement indisponible à <strong>{{ location_name }}</strong>",
+      "confirm_address": "Contacter la boutique pour confirmer l'adresse"
     }
   }
 }
