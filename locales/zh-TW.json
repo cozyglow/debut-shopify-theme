@@ -417,8 +417,7 @@
       "pick_up_available": "可提供取貨服務",
       "pick_up_currently_unavailable": "目前無法提供取貨服務",
       "pick_up_available_at_html": "可提供 <strong>{{ location_name }}</strong> 的取貨服務",
-      "pick_up_unavailable_at_html": "目前無法提供 <strong>{{ location_name }}</strong> 的取貨服務",
-      "confirm_address": "聯絡商店以確認地址"
+      "pick_up_unavailable_at_html": "目前無法提供 <strong>{{ location_name }}</strong> 的取貨服務"
     }
   }
 }

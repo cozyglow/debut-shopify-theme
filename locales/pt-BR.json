@@ -417,8 +417,7 @@
       "pick_up_available": "Retirada disponível",
       "pick_up_currently_unavailable": "Retirada indisponível no momento",
       "pick_up_available_at_html": "Retirada disponível em <strong>{{ location_name }}</strong>",
-      "pick_up_unavailable_at_html": "Retirada em <strong>{{ location_name }}</strong> indisponível no momento",
-      "confirm_address": "Entre em contato com a loja para confirmar o endereço"
+      "pick_up_unavailable_at_html": "Retirada em <strong>{{ location_name }}</strong> indisponível no momento"
     }
   }
 }

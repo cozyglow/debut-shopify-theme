@@ -417,8 +417,7 @@
       "pick_up_available": "การรับสินค้าด้วยตนเองพร้อมให้บริการ",
       "pick_up_currently_unavailable": "การรับสินค้าด้วยตนเองไม่พร้อมให้บริการในขณะนี้",
       "pick_up_available_at_html": "การรับสินค้าด้วยตนเองพร้อมให้บริการที่ <strong>{{ location_name }}</strong>",
-      "pick_up_unavailable_at_html": "การรับสินค้าด้วยตนเองไม่พร้อมให้บริการที่ <strong>{{ location_name }}</strong> ในขณะนี้",
-      "confirm_address": "ติดต่อร้านค้าเพื่อยืนยันที่อยู่"
+      "pick_up_unavailable_at_html": "การรับสินค้าด้วยตนเองไม่พร้อมให้บริการที่ <strong>{{ location_name }}</strong> ในขณะนี้"
     }
   }
 }

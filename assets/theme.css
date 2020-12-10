@@ -6912,6 +6912,8 @@ hr {
   margin-top: 8px; }
 
 .store-availability-container .icon {
+  min-width: 12px;
+  min-height: 12px;
   width: 12px;
   height: 12px;
   margin: 4px 4px 0 0; }
@@ -6929,14 +6931,6 @@ hr {
 
 .store-availability-container .store-availability-list__stock .icon {
   margin: 0 2px 3px 0; }
-
-.store-availability-container .store-availability-list__confirm-address .icon-unverified-address {
-  margin: 0 0 3px 0; }
-  .store-availability-container .store-availability-list__confirm-address .icon-unverified-address .icon-unverified-address__exclamation {
-    fill: var(--color-body-text); }
-  .store-availability-container .store-availability-list__confirm-address .icon-unverified-address .icon-unverified-address__circle {
-    stroke: var(--color-body-text);
-    fill: transparent; }
 
 .store-availabilities-modal {
   z-index: 3;

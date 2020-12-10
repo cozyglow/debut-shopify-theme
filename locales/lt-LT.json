@@ -431,8 +431,7 @@
       "pick_up_available": "Galimas paėmimas",
       "pick_up_currently_unavailable": "Paėmimas šiuo metu negalimas",
       "pick_up_available_at_html": "Paėmimas galimas <strong>{{ location_name }}</strong>",
-      "pick_up_unavailable_at_html": "Paėmimas <strong>{{ location_name }}</strong> šiuo metu negalimas",
-      "confirm_address": "Susisiekite su parduotuve, kad patvirtinti adresą"
+      "pick_up_unavailable_at_html": "Paėmimas <strong>{{ location_name }}</strong> šiuo metu negalimas"
     }
   }
 }

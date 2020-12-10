@@ -431,8 +431,7 @@
       "pick_up_available": "Vyzvednutí k dispozici",
       "pick_up_currently_unavailable": "Vyzvednutí není momentálně k dispozici",
       "pick_up_available_at_html": "Vyzvednutí k dispozici v lokalitě <strong>{{ location_name }}</strong>",
-      "pick_up_unavailable_at_html": "Vyzvednutí není momentálně v lokalitě <strong>{{ location_name }}</strong> k dispozici",
-      "confirm_address": "Kontaktujte obchod a potvrďte adresu"
+      "pick_up_unavailable_at_html": "Vyzvednutí není momentálně v lokalitě <strong>{{ location_name }}</strong> k dispozici"
     }
   }
 }

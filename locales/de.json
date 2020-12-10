@@ -417,8 +417,7 @@
       "pick_up_available": "Abholung verfügbar",
       "pick_up_currently_unavailable": "Abholung derzeit nicht verfügbar",
       "pick_up_available_at_html": "Abholung bei <strong>{{ location_name }}</strong> verfügbar",
-      "pick_up_unavailable_at_html": "Abholung bei <strong>{{ location_name }}</strong> derzeit nicht verfügbar",
-      "confirm_address": "Zur Adressbestätigung Shop kontaktieren"
+      "pick_up_unavailable_at_html": "Abholung bei <strong>{{ location_name }}</strong> derzeit nicht verfügbar"
     }
   }
 }

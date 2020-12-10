@@ -417,8 +417,7 @@
       "pick_up_available": "Személyesen átvehető",
       "pick_up_currently_unavailable": "Személyesen egyelőre nem vehető át",
       "pick_up_available_at_html": "Személyesen átvehető itt: <strong>{{ location_name }}</strong>",
-      "pick_up_unavailable_at_html": "Személyesen egyelőre nem vehető át itt: <strong>{{ location_name }}</strong>",
-      "confirm_address": "A cím megerősítéséhez vedd fel a kapcsolatot a webáruházzal."
+      "pick_up_unavailable_at_html": "Személyesen egyelőre nem vehető át itt: <strong>{{ location_name }}</strong>"
     }
   }
 }

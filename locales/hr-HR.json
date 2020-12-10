@@ -424,8 +424,7 @@
       "pick_up_available": "Dostupno je preuzimanje",
       "pick_up_currently_unavailable": "Preuzimanje trenutno nije dostupno",
       "pick_up_available_at_html": "Preuzimanje je dostupno na lokaciji <strong>{{ location_name }}</strong>",
-      "pick_up_unavailable_at_html": "Preuzimanje trenutno nije dostupno na lokaciji <strong>{{ location_name }}</strong>",
-      "confirm_address": "Obrati se trgovini radi potvrde adrese"
+      "pick_up_unavailable_at_html": "Preuzimanje trenutno nije dostupno na lokaciji <strong>{{ location_name }}</strong>"
     }
   }
 }

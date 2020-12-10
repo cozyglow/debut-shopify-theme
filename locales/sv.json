@@ -417,8 +417,7 @@
       "pick_up_available": "Hämtning tillgänglig",
       "pick_up_currently_unavailable": "Hämtning är för närvarande inte tillgängligt",
       "pick_up_available_at_html": "Hämtning tillgänglig på <strong>{{ location_name }}</strong>",
-      "pick_up_unavailable_at_html": "Hämtning är för närvarande inte tillgängligt på <strong>{{ location_name }}</strong>",
-      "confirm_address": "Kontakta butik för att bekräfta adress"
+      "pick_up_unavailable_at_html": "Hämtning är för närvarande inte tillgängligt på <strong>{{ location_name }}</strong>"
     }
   }
 }

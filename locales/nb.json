@@ -417,8 +417,7 @@
       "pick_up_available": "Henting tilgjengelig",
       "pick_up_currently_unavailable": "Henting er ikke tilgjengelig for øyeblikket",
       "pick_up_available_at_html": "Henting tilgjengelig hos <strong>{{ location_name }}</strong>",
-      "pick_up_unavailable_at_html": "Henting er ikke tilgjengelig for øyeblikket hos <strong>{{ location_name }}</strong>",
-      "confirm_address": "Kontakt butikken for å bekrefte adressen"
+      "pick_up_unavailable_at_html": "Henting er ikke tilgjengelig for øyeblikket hos <strong>{{ location_name }}</strong>"
     }
   }
 }

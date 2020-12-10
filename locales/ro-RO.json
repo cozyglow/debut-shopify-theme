@@ -424,8 +424,7 @@
       "pick_up_available": "Ridicare disponibilă",
       "pick_up_currently_unavailable": "Ridicare indisponibilă momentan",
       "pick_up_available_at_html": "Ridicare disponibilă la <strong>{{ location_name }}</strong>",
-      "pick_up_unavailable_at_html": "Ridicare indisponibilă momentan la <strong>{{ location_name }}</strong>",
-      "confirm_address": "Contactează magazinul pentru a confirma adresa"
+      "pick_up_unavailable_at_html": "Ridicare indisponibilă momentan la <strong>{{ location_name }}</strong>"
     }
   }
 }

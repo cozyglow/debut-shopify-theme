@@ -417,8 +417,7 @@
       "pick_up_available": "Đã có dịch vụ nhận hàng",
       "pick_up_currently_unavailable": "Hiện chưa có dịch vụ nhận hàng",
       "pick_up_available_at_html": "Đã có dịch vụ nhận hàng tại <strong>{{ location_name }}</strong>",
-      "pick_up_unavailable_at_html": "Hiện chưa có dịch vụ nhận hàng tại <strong>{{ location_name }}</strong>",
-      "confirm_address": "Liên hệ với cửa hàng để xác nhận địa chỉ"
+      "pick_up_unavailable_at_html": "Hiện chưa có dịch vụ nhận hàng tại <strong>{{ location_name }}</strong>"
     }
   }
 }

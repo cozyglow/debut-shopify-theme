@@ -145,7 +145,7 @@
       "email": "이메일",
       "message": "메시지",
       "post": "댓글 달기",
-      "moderated": "댓글 게시 전에는 반드시 승인이 필요합니다. ",
+      "moderated": "댓글 게시 전에는 반드시 승인이 필요합니다.",
       "success_moderated": "댓글이 성공적으로 게시되었습니다. 블로그 조정 중이므로 잠시 후에 게시됩니다.",
       "success": "댓글이 성공적으로 게시되었습니다. 감사합니다!",
       "unapproved": "제공된 이메일 주소가 댓글 게시를 위해 승인되지 않았습니다.",
@@ -170,7 +170,7 @@
       "update": "업데이트",
       "checkout": "결제",
       "empty": "현재 카트가 비어 있습니다.",
-      "cookies_required": "쿠키를 사용하여 쇼핑 카드 사용 ",
+      "cookies_required": "쿠키를 사용하여 쇼핑 카드 사용",
       "continue_shopping": "쇼핑 계속하기",
       "cart_error": "카트를 업데이트하는 중 오류가 발생했습니다. 다시 시도하십시오."
     },
@@ -417,8 +417,7 @@
       "pick_up_available": "픽업을 사용할 수 있습니다.",
       "pick_up_currently_unavailable": "현재 픽업을 사용할 수 없습니다.",
       "pick_up_available_at_html": "<strong>{{ location_name }}</strong>에서 픽업을 사용할 수 있습니다.",
-      "pick_up_unavailable_at_html": "<strong>{{ location_name }}</strong>에서는 현재 픽업을 사용할 수 없습니다.",
-      "confirm_address": "스토어에 연락하여 주소 확인하기"
+      "pick_up_unavailable_at_html": "<strong>{{ location_name }}</strong>에서는 현재 픽업을 사용할 수 없습니다."
     }
   }
 }

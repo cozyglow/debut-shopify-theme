@@ -167,7 +167,7 @@
     "general": {
       "title": "Twój koszyk",
       "note": "Dodaj notatkę do swojego zamówienia",
-      "removed_item_html": "Usunięto <span class=\"cart__removed-product-details\">{{ quantity }}</span>({{ quantity }}) z Twojego koszyka.",
+      "removed_item_html": "Usunięto <span class=\"cart__removed-product-details\">({{ quantity }}) {{ link }}</span> z Twojego koszyka.",
       "remove": "Usuń",
       "subtotal": "Suma częściowa",
       "savings": "Oszczędzasz",
@@ -431,8 +431,7 @@
       "pick_up_available": "Odbiór jest możliwy",
       "pick_up_currently_unavailable": "Odbiór jest obecnie niemożliwy",
       "pick_up_available_at_html": "Odbiór możliwy w <strong>{{ location_name }}</strong>",
-      "pick_up_unavailable_at_html": "Odbiór w <strong>{{ location_name }}</strong> jest obecnie niemożliwy",
-      "confirm_address": "Skontaktuj się ze sklepem, aby potwierdzić adres"
+      "pick_up_unavailable_at_html": "Odbiór w <strong>{{ location_name }}</strong> jest obecnie niemożliwy"
     }
   }
 }

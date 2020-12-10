@@ -417,8 +417,7 @@
       "pick_up_available": "Възможност за взимане",
       "pick_up_currently_unavailable": "В момента няма възможност за взимане",
       "pick_up_available_at_html": "Възможност за взимане от <strong>{{ location_name }}</strong>",
-      "pick_up_unavailable_at_html": "В момента няма възможност за взимане от <strong>{{ location_name }}</strong>",
-      "confirm_address": "Свържете се с магазина, за да потвърдите адреса"
+      "pick_up_unavailable_at_html": "В момента няма възможност за взимане от <strong>{{ location_name }}</strong>"
     }
   }
 }

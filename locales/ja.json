@@ -417,8 +417,7 @@
       "pick_up_available": "受取が可能です",
       "pick_up_currently_unavailable": "受取は現在できません",
       "pick_up_available_at_html": "<strong>{{ location_name }}</strong>での受取が可能です",
-      "pick_up_unavailable_at_html": "<strong>{{ location_name }}</strong>での受取は現在できません",
-      "confirm_address": "ストアに連絡して住所を確認する"
+      "pick_up_unavailable_at_html": "<strong>{{ location_name }}</strong>での受取は現在できません"
     }
   }
 }

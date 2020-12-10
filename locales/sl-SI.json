@@ -431,8 +431,7 @@
       "pick_up_available": "Na voljo je osebni prevzem",
       "pick_up_currently_unavailable": "Osebni prevzem trenutno ni na voljo",
       "pick_up_available_at_html": "Osebni prevzem je mogoč na prevzemnem mestu <strong>{{ location_name }}</strong>",
-      "pick_up_unavailable_at_html": "Na prevzemnem mestu <strong>{{ location_name }}</strong> osebni prevzem trenutno ni mogoč",
-      "confirm_address": "Za potrditev naslova se obrnite na trgovino"
+      "pick_up_unavailable_at_html": "Na prevzemnem mestu <strong>{{ location_name }}</strong> osebni prevzem trenutno ni mogoč"
     }
   }
 }

@@ -8268,6 +8268,7 @@ theme.Product = (function() {
 
       fetch('/cart/add.js', {
         method: 'POST',
+        credentials: 'same-origin',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
           'X-Requested-With': 'XMLHttpRequest'
@@ -8405,7 +8406,7 @@ theme.Product = (function() {
         selling_plan_name
       );
 
-      fetch('/cart.js')
+      fetch('/cart.js', { credentials: 'same-origin' })
         .then(function(response) {
           return response.json();
         })
