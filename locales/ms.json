@@ -417,8 +417,7 @@
       "pick_up_available": "Kutipan tersedia",
       "pick_up_currently_unavailable": "Kutipan tidak tersedia pada masa ini",
       "pick_up_available_at_html": "Kutipan tersedia di <strong>{{ location_name }}</strong>",
-      "pick_up_unavailable_at_html": "Kutipan tidak tersedia pada masa ini di <strong>{{ location_name }}</strong>",
-      "confirm_address": "Hubungi kedai untuk mengesahkan alamat"
+      "pick_up_unavailable_at_html": "Kutipan tidak tersedia pada masa ini di <strong>{{ location_name }}</strong>"
     }
   }
 }

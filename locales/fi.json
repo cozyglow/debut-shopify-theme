@@ -417,8 +417,7 @@
       "pick_up_available": "Nouto saatavilla",
       "pick_up_currently_unavailable": "Nouto ei ole tällä hetkellä saatavilla",
       "pick_up_available_at_html": "Nouto saatavilla paikassa <strong>{{ location_name }}</strong>",
-      "pick_up_unavailable_at_html": "Nouto ei ole tällä hekellä saatavilla paikassa <strong>{{ location_name }}</strong>",
-      "confirm_address": "Ota yhteyttä kauppaan vahvistaaksesi osoitteen"
+      "pick_up_unavailable_at_html": "Nouto ei ole tällä hekellä saatavilla paikassa <strong>{{ location_name }}</strong>"
     }
   }
 }

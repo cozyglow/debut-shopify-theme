@@ -431,8 +431,7 @@
       "pick_up_available": "Самовывоз доступен",
       "pick_up_currently_unavailable": "Самовывоз сейчас недоступен",
       "pick_up_available_at_html": "Самовывоз доступен: <strong>{{ location_name }}</strong>",
-      "pick_up_unavailable_at_html": "Самовывоз сейчас недоступен: <strong>{{ location_name }}</strong>",
-      "confirm_address": "Обратитесь в магазин, чтобы подтвердить адрес"
+      "pick_up_unavailable_at_html": "Самовывоз сейчас недоступен: <strong>{{ location_name }}</strong>"
     }
   }
 }

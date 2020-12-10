@@ -3,7 +3,7 @@
     "name": "theme_info",
     "theme_name": "Cozy Glow Debut",
     "theme_author": "Cozy Glow & Shopify",
-    "theme_version": "17.6.1",
+    "theme_version": "17.7.0",
     "theme_documentation_url": "https://help.shopify.com/manual/using-themes/themes-by-shopify/debut",
     "theme_support_url": "https://support.shopify.com/"
   },
@@ -966,7 +966,7 @@
           "th": "บัญชีโซเชียลมีเดีย",
           "tr": "Sosyal medya hesapları",
           "vi": "Tài khoản mạng xã hội",
-          "zh-CN": "社媒账户",
+          "zh-CN": "社交媒体账户",
           "zh-TW": "社群帳戶"
         }
       },

@@ -83,11 +83,6 @@
                 {{ address.phone }}<br>
               </p>
             {%- endif -%}
-            {%- unless availability.location.latitude and availability.location.longitude -%}
-              <p class="store-availability-list__confirm-address store-availability-small-text">
-                {% render 'icon-unverified-address' %} {{ 'store_availability.general.confirm_address' | t }}
-              </p>
-            {%- endunless -%}
           </li>
         {%- endfor -%}
       </ul>

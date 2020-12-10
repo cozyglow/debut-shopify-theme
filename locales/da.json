@@ -73,7 +73,7 @@
     },
     "newsletter_form": {
       "newsletter_email": "Tilmeld dig vores adresseliste",
-      "email_placeholder": "E-mailadresse",
+      "email_placeholder": "Mailadresse",
       "confirmation": "Tak for dit abonnement.",
       "submit": "Abonnér"
     },
@@ -148,7 +148,7 @@
       "moderated": "Bemærk, at kommentarer skal godkendes, før de bliver offentliggjort",
       "success_moderated": "Din kommentar er blevet opslået. Den bliver offentliggjort om lidt, da vores blog er under opsyn.",
       "success": "Din kommentar er blevet opslået. Tak!",
-      "unapproved": "Den angivne e-mailadresse er ikke godkendt til at opslå kommentarer.",
+      "unapproved": "Den angivne mailadresse er ikke godkendt til at opslå kommentarer.",
       "comments_with_count": {
         "one": "{{ count }} kommentar",
         "other": "{{ count }} kommentarer"
@@ -417,8 +417,7 @@
       "pick_up_available": "Afhentning er tilgængeligt",
       "pick_up_currently_unavailable": "Afhentning er ikke tilgængeligt i øjeblikket",
       "pick_up_available_at_html": "Afhentning er tilgængelig for <strong>{{ location_name }}</strong>",
-      "pick_up_unavailable_at_html": "Afhentning er ikke tilgængelig for <strong>{{ location_name }}</strong> i øjeblikket",
-      "confirm_address": "Kontakt butikken for at bekræfte adressen"
+      "pick_up_unavailable_at_html": "Afhentning er ikke tilgængelig for <strong>{{ location_name }}</strong> i øjeblikket"
     }
   }
 }

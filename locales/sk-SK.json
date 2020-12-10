@@ -431,8 +431,7 @@
       "pick_up_available": "K dispozícii na vyzdvihnutie",
       "pick_up_currently_unavailable": "Aktuálne dostupné na vyzdvihnutie",
       "pick_up_available_at_html": "K dispozícii na vyzdvihnutie na adrese <strong>{{ location_name }}</strong>",
-      "pick_up_unavailable_at_html": "Aktuálne dostupné na vyzdvihnutie na adrese <strong>{{ location_name }}</strong>",
-      "confirm_address": "Kontaktujte obchod a potvrďte adresu"
+      "pick_up_unavailable_at_html": "Aktuálne dostupné na vyzdvihnutie na adrese <strong>{{ location_name }}</strong>"
     }
   }
 }

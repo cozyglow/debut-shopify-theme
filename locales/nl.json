@@ -417,8 +417,7 @@
       "pick_up_available": "Afhaling is beschikbaar",
       "pick_up_currently_unavailable": "Afhaling is momenteel niet beschikbaar",
       "pick_up_available_at_html": "Afhaling is beschikbaar bij <strong>{{ location_name }}</strong>",
-      "pick_up_unavailable_at_html": "Afhaling is momenteel niet beschikbaar bij <strong>{{ location_name }}</strong>",
-      "confirm_address": "Neem contact op met de winkel om het adres te bevestigen"
+      "pick_up_unavailable_at_html": "Afhaling is momenteel niet beschikbaar bij <strong>{{ location_name }}</strong>"
     }
   }
 }

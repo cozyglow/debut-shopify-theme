@@ -417,8 +417,7 @@
       "pick_up_available": "Teslim alım kullanılabilir",
       "pick_up_currently_unavailable": "Teslim alım şu anda kullanılamıyor",
       "pick_up_available_at_html": "Teslim alım <strong>{{ location_name }}</strong> konumunda kullanılabilir",
-      "pick_up_unavailable_at_html": "Teslim alım <strong>{{ location_name }}</strong> konumunda şu anda kullanılamıyor",
-      "confirm_address": "Adresi doğrulamak için mağazayla iletişime geçin"
+      "pick_up_unavailable_at_html": "Teslim alım <strong>{{ location_name }}</strong> konumunda şu anda kullanılamıyor"
     }
   }
 }

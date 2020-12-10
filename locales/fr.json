@@ -417,8 +417,7 @@
       "pick_up_available": "Ramassage disponible",
       "pick_up_currently_unavailable": "Ramassage actuellement indisponible",
       "pick_up_available_at_html": "Ramassage disponible à <strong>{{ location_name }}</strong>",
-      "pick_up_unavailable_at_html": "Ramassage actuellement indisponible à <strong>{{ location_name }}</strong>",
-      "confirm_address": "Contacter la boutique pour confirmer l'adresse"
+      "pick_up_unavailable_at_html": "Ramassage actuellement indisponible à <strong>{{ location_name }}</strong>"
     }
   }
 }

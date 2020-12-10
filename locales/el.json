@@ -417,8 +417,7 @@
       "pick_up_available": "Υπάρχει δυνατότητα παραλαβής",
       "pick_up_currently_unavailable": "Δεν υπάρχει δυνατότητα παραλαβής",
       "pick_up_available_at_html": "Υπάρχει δυνατότητα παραλαβής από <strong>{{ location_name }}</strong>",
-      "pick_up_unavailable_at_html": "Δεν υπάρχει δυνατότητα παραλαβής από <strong>{{ location_name }}</strong>",
-      "confirm_address": "Επικοινωνήστε με το κατάστημα για να επιβεβαιώσετε τη διεύθυνση"
+      "pick_up_unavailable_at_html": "Δεν υπάρχει δυνατότητα παραλαβής από <strong>{{ location_name }}</strong>"
     }
   }
 }

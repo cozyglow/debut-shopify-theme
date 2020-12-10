@@ -417,8 +417,7 @@
       "pick_up_available": "पिकअप उपलब्ध",
       "pick_up_currently_unavailable": "वर्तमान में पिकअप अनुपलब्ध है",
       "pick_up_available_at_html": "<strong>{{ location_name }}</strong> पर उपलब्ध पिकअप",
-      "pick_up_unavailable_at_html": "पिकअप वर्तमान में <strong>{{ location_name }}</strong> पर अनुपलब्ध",
-      "confirm_address": "पते की पुष्टि करने के लिए स्टोर से संपर्क करें"
+      "pick_up_unavailable_at_html": "पिकअप वर्तमान में <strong>{{ location_name }}</strong> पर अनुपलब्ध"
     }
   }
 }

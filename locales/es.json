@@ -417,8 +417,7 @@
       "pick_up_available": "Retiro disponible",
       "pick_up_currently_unavailable": "Retiro no disponible actualmente",
       "pick_up_available_at_html": "Retiro disponible en <strong>{{ location_name }}</strong>",
-      "pick_up_unavailable_at_html": "Retiro no disponible actualmente en <strong>{{ location_name }}</strong>",
-      "confirm_address": "Contacta a la tienda para confirmar la dirección"
+      "pick_up_unavailable_at_html": "Retiro no disponible actualmente en <strong>{{ location_name }}</strong>"
     }
   }
 }
