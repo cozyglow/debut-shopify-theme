@@ -18,9 +18,10 @@
   {%- assign base_font_italic = base_font | font_modify: 'style', 'italic' -%}
   {%- assign base_font_bold_italic = base_font_bold | font_modify: 'style', 'italic' -%}
 
+  <link rel="preload" href="{{ 'theme.css' | asset_url }}" as="style">
   <link rel="preload" href="{{ 'main.min.css' | asset_url }}" as="style">
   <link rel="preload" href="{{ 'shopify.css' | asset_url }}" as="style">
-  <link rel="preload" href="{{ 'theme.css' | asset_url }}" as="style">
+  <link rel="preload" href="https://cdn.cozyglow.co.uk/fonts/fonts.css" as="style">
   <link rel="preload" as="font" href="{{ header_font | font_url }}" type="font/woff2" crossorigin>
   <link rel="preload" as="font" href="{{ base_font | font_url }}" type="font/woff2" crossorigin>
   <link rel="preload" as="font" href="{{ base_font_bold | font_url }}" type="font/woff2" crossorigin>
@@ -48,10 +49,10 @@
     {{ base_font_bold_italic | font_face: font_display: 'swap' }}
   </style>
 
-  {{ 'main.min.css' | asset_url | stylesheet_tag }}
-  {{ 'shopify.css' | asset_url | stylesheet_tag }}
   {{ 'theme.css' | asset_url | stylesheet_tag }}
   {{ 'gift-card.css' | asset_url | stylesheet_tag }}
+  {{ 'main.min.css' | asset_url | stylesheet_tag }}
+  {{ 'shopify.css' | asset_url | stylesheet_tag }}
 
   <script src="{{ 'bootstrap.min.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'vendor/qrcode.js' | shopify_asset_url }}" defer="defer"></script>
