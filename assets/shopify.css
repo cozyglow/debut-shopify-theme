@@ -24,6 +24,10 @@
   margin-bottom: 0;
 }
 
+.collection-grid-item__title.h3 {
+  color: var(--color-overlay-title-text);
+}
+
 .slideshow__text-content .slideshow__btn {
   color: var(--color-btn-primary-text);
 }
