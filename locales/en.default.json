@@ -158,6 +158,8 @@
   "cart": {
     "general": {
       "title": "Your cart",
+      "title_total_price": "Your cart total is {{ total_price }}.",
+      "subtitle": "Buy online and get fast, contactless delivery.",
       "note": "Add a note to your order",
       "removed_item_html": "Removed <span class=\"cart__removed-product-details\">({{ quantity }}) {{ link }}</span> from your cart.",
       "remove": "Remove",
