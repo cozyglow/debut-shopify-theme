@@ -402,12 +402,12 @@
       "disabled": "無効",
       "expired": "{{ expiry }}で有効期限が切れました",
       "active": "{{ expiry }}で有効期限が切れます",
-      "redeem_html": "{{ value }}のギフトカードを引き換えるために、このコードをチェックアウトで使用する",
+      "redeem_html": "{{ value }}のギフトカードにクーポンを使うために、このコードをチェックアウトで使用する",
       "shop_link": "買い物を始める",
       "print": "このギフトカードを印刷する",
       "remaining_html": "残り{{ balance }}使用可能です",
       "add_to_apple_wallet": "Apple Walletに追加する",
-      "qr_image_alt": "QRコード - スキャンしてギフトカードを引き換える"
+      "qr_image_alt": "QRコード - スキャンしてギフトカードにクーポンを使う"
     }
   },
   "store_availability": {

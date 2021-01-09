@@ -49,7 +49,7 @@
       }
     },
     "search": {
-      "empty_search_message": "O campo de pesquisa não pode estar vazio",
+      "empty_search_message": "O campo de pesquisa não pode ficar em branco",
       "title": "Pesquise no nosso site",
       "placeholder": "Pesquisar",
       "submit": "Enviar",
@@ -125,8 +125,8 @@
   },
   "blogs": {
     "article": {
-      "view_all": "Visualizar tudo",
-      "view_all_blogs": "Visualizar todos os artigos",
+      "view_all": "Ver tudo",
+      "view_all_blogs": "Ver todos os artigos",
       "all_topics": "Todos os tópicos",
       "by_author": "por {{ author }}",
       "posted_in": "Postado em",
@@ -163,8 +163,8 @@
       "remove": "Remover",
       "subtotal": "Subtotal",
       "savings": "Você está economizando",
-      "taxes_and_shipping_at_checkout": "Impostos e frete calculados no checkout",
-      "taxes_and_shipping_policy_at_checkout_html": "Impostos e <a href=\"{{ link }}\">frete</a> calculados no checkout",
+      "taxes_and_shipping_at_checkout": "Tributos e frete calculados no checkout",
+      "taxes_and_shipping_policy_at_checkout_html": "Tributos e <a href=\"{{ link }}\">frete</a> calculados no checkout",
       "taxes_included_but_shipping_at_checkout": "Imposto incluído e frete calculado no checkout",
       "taxes_included_and_shipping_policy_html": "Taxas incluídas. <a href=\"{{ link }}\">Frete</a> calculado no checkout.",
       "update": "Atualizar",
@@ -200,8 +200,8 @@
   },
   "collections": {
     "general": {
-      "view_all": "Visualizar tudo",
-      "view_all_label": "Visualizar todos os produtos da coleção {{ collection_name }}",
+      "view_all": "Ver tudo",
+      "view_all_label": "Ver todos os produtos da coleção {{ collection_name }}",
       "no_matches": "Desculpe, não há produtos nesta coleção",
       "items_with_count": {
         "one": "{{ count }} produto",
@@ -235,7 +235,7 @@
     "account": {
       "title": "Minha conta",
       "details": "Informações da conta",
-      "view_addresses": "Visualizar endereços",
+      "view_addresses": "Ver endereços",
       "return": "Retornar às informações da conta"
     },
     "activate_account": {
@@ -299,7 +299,7 @@
       "fulfillment_status": "Status de processamento do pedido",
       "discount": "Desconto",
       "shipping": "Frete",
-      "tax": "Impostos",
+      "tax": "Tributos",
       "product": "Produto",
       "sku": "SKU",
       "price": "Preço",
@@ -387,7 +387,7 @@
       "include_taxes": "Taxas incluídas.",
       "shipping_policy_html": "<a href=\"{{ link }}\">Frete</a> calculado no checkout.",
       "unit_price_label": "Preço unitário",
-      "view_cart": "Visualizar carrinho",
+      "view_cart": "Ver carrinho",
       "availability": "Disponibilidade",
       "from_lowest_price_html": "de {{ lowest_price }}",
       "view_in_space": "Ver no seu espaço",
