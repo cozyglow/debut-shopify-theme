@@ -157,9 +157,9 @@
   },
   "cart": {
     "general": {
-      "title": "Carrito de compra",
+      "title": "Carrito",
       "note": "Agregue una nota a su pedido",
-      "removed_item_html": "Eliminó <span class=\"cart__removed-product-details\">({{ quantity }}) {{ link }}</span> de tu carrito de compra.",
+      "removed_item_html": "Eliminó <span class=\"cart__removed-product-details\">({{ quantity }}) {{ link }}</span> de tu carrito.",
       "remove": "Quitar",
       "subtotal": "Subtotal",
       "savings": "Está ahorrando",
@@ -170,7 +170,7 @@
       "update": "Actualizar carrito",
       "checkout": "Finalizar pedido",
       "empty": "Su carrito actualmente está vacío.",
-      "cookies_required": "Habilite las cookies para usar el carrito de compras",
+      "cookies_required": "Habilite las cookies para usar el carrito",
       "continue_shopping": "Seguir comprando",
       "cart_error": "Se ha producido un error al actualizar tu carrito. Vuelve a intentarlo."
     },
@@ -188,7 +188,7 @@
       "update": "Actualizar carrito"
     },
     "popup": {
-      "added_to_cart": "Recién agregado a tu carrito de compra",
+      "added_to_cart": "Recién agregado a tu carrito",
       "cart_count": {
         "one": "{{ count }} artículo",
         "other": "{{ count }} artículos"
@@ -342,7 +342,7 @@
       "product_description": "Este campo se utiliza para describir los detalles de tu producto. Informa a los clientes acerca de la apariencia, percepción y estilo de tu producto. Incluye detalles sobre el color, los materiales utilizados, el tamaño y donde se hizo.",
       "collection_title": "Nombre de tu colección",
       "blog_title": "Título de tu publicación",
-      "blog_excerpt": "Tu tienda no ha publicado ninguna entrada en el blog. Un blog puede ser utilizado para hablar sobre los nuevos lanzamientos del producto, consejos u otras noticias que deseas compartir con tus clientes. Puedes verificar el blog de comercio electrónico Shopify para la inspiración y consejos para tu propia tienda y blog.",
+      "blog_excerpt": "Tu tienda no ha publicado ninguna entrada en el blog. Un blog puede ser utilizado para hablar sobre los nuevos lanzamientos del producto, consejos u otras noticias que deseas compartir con tus clientes. Puedes verificar el blog de ecommerce Shopify para la inspiración y consejos para tu propia tienda y blog.",
       "blog_author": "Nombre del autor",
       "no_content": "Esta sección no tiene ningún contenido en este momento. Agrega contenido a esta sección utilizando la barra lateral."
     }
@@ -380,7 +380,7 @@
       "sale_price": "Precio de venta",
       "quantity": "Cantidad",
       "add_to_cart": "Agregar al carrito",
-      "loader_label": "Agregando el producto a tu carrito de compra",
+      "loader_label": "Agregando el producto a tu carrito",
       "back_to_collection": "Volver a {{ title }}",
       "vendor": "Proveedor",
       "quantity_minimum_message": "La cantidad debe ser 1 o más",

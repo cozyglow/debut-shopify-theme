@@ -19,7 +19,7 @@
 
 {%- if form.errors -%}
 
-  {%- if form.errors.translated_fields | size == 1 and form.errors.first == 'form' -%}
+  {%- if form.errors.translated_fields.size == 1 and form.errors.first == 'form' -%}
     <p class="form-message" tabindex="-1" data-form-status>
       {{ form.errors.messages['form'] }}
     </p>
