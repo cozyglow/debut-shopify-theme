@@ -9806,8 +9806,8 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .bg-blur-saturate {
-  -webkit-backdrop-filter: saturate(1.8) blur(1.25rem);
-  backdrop-filter: saturate(1.8) blur(1.25rem);
+  -webkit-backdrop-filter: blur(1.25rem) saturate(1.8);
+  backdrop-filter: blur(1.25rem) saturate(1.8);
 }
 
 .bg-blur {
@@ -12946,6 +12946,7 @@ canvas {
 .navbar-chapter {
   padding: 0;
   font-size: 0.875rem;
+  z-index: 1019;
 }
 
 .navbar-chapter .container,
@@ -12973,6 +12974,34 @@ canvas {
   margin-right: auto;
   margin-bottom: 0.5rem;
   margin-left: auto;
+}
+
+.footer-directory a {
+  color: inherit;
+}
+
+.footer-directory h3 {
+  font-size: inherit;
+}
+
+@media (max-width: 575.98px) {
+  .footer-directory a {
+    padding-left: 1rem;
+  }
+  .footer-directory h3 {
+    margin-bottom: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .footer-directory ul {
+    margin-bottom: 0;
+  }
+  .footer-directory ul li:last-child {
+    margin-bottom: 1rem;
+  }
+  .footer-directory .section {
+    border-bottom: solid 1px #dee2e6;
+  }
 }
 
 @font-face {
