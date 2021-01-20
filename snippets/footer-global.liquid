@@ -1,0 +1,145 @@
+{% comment %}
+  Usage:
+  {% include 'footer-global' %}
+
+  Dependencies:
+  - /assets/bootstrap.bundle.min.js
+  - /snippets/footer-global_schema.json
+{% endcomment %}
+
+<nav class="footer-directory row" id="collapseDirectory" aria-label="Cozy Glow Directory" role="navigation">
+  <div class="col col-12 col-sm">
+    <div class="section">
+      <h3 data-toggle="collapse" role="button" data-target="#collapseGlobalFooterCol1" aria-expanded="false" aria-controls="collapseGlobalFooterCol1">{{ section.settings.global_footer_title_col_1 }}</h3>
+      <ul class="list-unstyled collapse d-sm-block" id="collapseGlobalFooterCol1">
+        {% for link in linklists[section.settings.global_footer_menu_col_1].links %}
+          <li>
+            <a href="{{ link.url }}" {% if link.current %}aria-current="page"{% endif %}>{{ link.title | escape }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <div class="col col-12 col-sm">
+    <div class="section">
+      <h3 data-toggle="collapse" role="button" data-target="#collapseGlobalFooterCol2" aria-expanded="false" aria-controls="collapseGlobalFooterCol2">{{ section.settings.global_footer_title_col_2 }}</h3>
+      <ul class="list-unstyled collapse d-sm-block" id="collapseGlobalFooterCol2">
+        {% for link in linklists[section.settings.global_footer_menu_col_2].links %}
+          <li>
+            <a href="{{ link.url }}" {% if link.current %}aria-current="page"{% endif %}>{{ link.title | escape }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <div class="col col-12 col-sm">
+    <div class="section">
+      <h3 data-toggle="collapse" role="button" data-target="#collapseGlobalFooterCol3" aria-expanded="false" aria-controls="collapseGlobalFooterCol3">{{ section.settings.global_footer_title_col_3 }}</h3>
+      <ul class="list-unstyled collapse d-sm-block" id="collapseGlobalFooterCol3">
+        {% for link in linklists[section.settings.global_footer_menu_col_3].links %}
+          <li>
+            <a href="{{ link.url }}" {% if link.current %}aria-current="page"{% endif %}>{{ link.title | escape }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <div class="col col-12 col-sm">
+    <div class="section">
+      <h3 data-toggle="collapse" role="button" data-target="#collapseGlobalFooterCol4Row1" aria-expanded="false" aria-controls="collapseGlobalFooterCol4Row1">{{ section.settings.global_footer_title_col_4_row_1 }}</h3>
+      <ul class="list-unstyled collapse d-sm-block" id="collapseGlobalFooterCol4Row1">
+        {% for link in linklists[section.settings.global_footer_menu_col_4_row_1].links %}
+          <li>
+            <a href="{{ link.url }}" {% if link.current %}aria-current="page"{% endif %}>{{ link.title | escape }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3 data-toggle="collapse" role="button" data-target="#collapseGlobalFooterCol4Row2" aria-expanded="false" aria-controls="collapseGlobalFooterCol4Row2">{{ section.settings.global_footer_title_col_4_row_2 }}</h3>
+      <ul class="list-unstyled collapse d-sm-block" id="collapseGlobalFooterCol4Row2">
+        {% for link in linklists[section.settings.global_footer_menu_col_4_row_2].links %}
+          <li>
+            <a href="{{ link.url }}" {% if link.current %}aria-current="page"{% endif %}>{{ link.title | escape }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <div class="col col-12 col-sm">
+    <div class="section">
+      <h3 data-toggle="collapse" role="button" data-target="#collapseGlobalFooterCol5Row1" aria-expanded="false" aria-controls="collapseGlobalFooterCol5Row1">{{ section.settings.global_footer_title_col_5_row_1 }}</h3>
+      <ul class="list-unstyled collapse d-sm-block" id="collapseGlobalFooterCol5Row1">
+        {% for link in linklists[section.settings.global_footer_menu_col_5_row_1].links %}
+          <li>
+            <a href="{{ link.url }}" {% if link.current %}aria-current="page"{% endif %}>{{ link.title | escape }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3 data-toggle="collapse" role="button" data-target="#collapseGlobalFooterCol5Row2" aria-expanded="false" aria-controls="collapseGlobalFooterCol5Row2">{{ section.settings.global_footer_title_col_5_row_2 }}</h3>
+      <ul class="list-unstyled collapse d-sm-block" id="collapseGlobalFooterCol5Row2">
+        {% for link in linklists[section.settings.global_footer_menu_col_5_row_2].links %}
+          <li>
+            <a href="{{ link.url }}" {% if link.current %}aria-current="page"{% endif %}>{{ link.title | escape }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script defer="defer">
+  $(window).ready(function () {
+    const breakpointSm = parseInt($(':root').css('--breakpoint-sm'));
+
+    const $dataToggleCollapses = $('#collapseDirectory [data-toggle="collapse"]');
+    const $collapses = $('#collapseDirectory .collapse');
+
+    let width = $(window).width();
+
+    let isEnabled = true;
+
+    if (width >= breakpointSm) {
+      $dataToggleCollapses.each(function () {
+        const $this = $(this);
+
+        $this.removeAttr('data-toggle');
+        $this.removeAttr('role');
+      });
+
+      isEnabled = false;
+    }
+
+    $(window).resize(function () {
+      width = $(window).width();
+
+      if (width < breakpointSm) {
+        if (!isEnabled) {
+          $dataToggleCollapses.each(function () {
+            $(this).attr('data-toggle', 'collapse');
+            $(this).attr('role', 'button');
+          });
+
+          isEnabled = true;
+        }
+      } else {
+        if (isEnabled) {
+          $dataToggleCollapses.each(function () {
+            $(this).removeAttr('data-toggle');
+            $(this).removeAttr('role');
+          });
+
+          isEnabled = false;
+        }
+      }
+    });
+  });
+</script>

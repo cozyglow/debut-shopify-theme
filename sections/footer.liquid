@@ -139,6 +139,8 @@
 
 <footer class="site-footer critical-hidden" role="contentinfo" data-section-id="{{ section.id }}" data-section-type="footer-section">
   <div class="page-width">
+    {% include 'footer-global' %}
+
     <div class="site-footer__content">
       {%- for block in section.blocks -%}
 
@@ -371,6 +373,162 @@
   },
   "max_blocks": 4,
   "settings": [
+    {
+      "type": "header",
+      "content": {
+        "en": "Global footer"
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": {
+        "en": "Column 1"
+      }
+    },
+    {
+      "type": "text",
+      "id": "global_footer_title_col_1",
+      "label": {
+        "en": "Heading"
+      },
+      "default": {
+        "en": "Shop and Learn"
+      }
+    },
+    {
+      "type": "link_list",
+      "id": "global_footer_menu_col_1",
+      "label": {
+        "en": "Menu"
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": {
+        "en": "Column 2"
+      }
+    },
+    {
+      "type": "text",
+      "id": "global_footer_title_col_2",
+      "label": {
+        "en": "Heading"
+      },
+      "default": {
+        "en": "Account"
+      }
+    },
+    {
+      "type": "link_list",
+      "id": "global_footer_menu_col_2",
+      "label": {
+        "en": "Menu"
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": {
+        "en": "Column 3"
+      }
+    },
+    {
+      "type": "text",
+      "id": "global_footer_title_col_3",
+      "label": {
+        "en": "Heading"
+      },
+      "default": {
+        "en": "Store"
+      }
+    },
+    {
+      "type": "link_list",
+      "id": "global_footer_menu_col_3",
+      "label": {
+        "en": "Menu"
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": {
+        "en": "Column 4"
+      }
+    },
+    {
+      "type": "text",
+      "id": "global_footer_title_col_4_row_1",
+      "label": {
+        "en": "Heading Row 1"
+      },
+      "default": {
+        "en": "For Business"
+      }
+    },
+    {
+      "type": "link_list",
+      "id": "global_footer_menu_col_4_row_1",
+      "label": {
+        "en": "Menu Row 1"
+      }
+    },
+    {
+      "type": "text",
+      "id": "global_footer_title_col_4_row_2",
+      "label": {
+        "en": "Heading Row 2"
+      },
+      "default": {
+        "en": "For Education"
+      }
+    },
+    {
+      "type": "link_list",
+      "id": "global_footer_menu_col_4_row_2",
+      "label": {
+        "en": "Menu Row 2"
+      }
+    }
+    ,
+    {
+      "type": "paragraph",
+      "content": {
+        "en": "Column 5"
+      }
+    },
+    {
+      "type": "text",
+      "id": "global_footer_title_col_5_row_1",
+      "label": {
+        "en": "Heading Row 1"
+      },
+      "default": {
+        "en": "Values"
+      }
+    },
+    {
+      "type": "link_list",
+      "id": "global_footer_menu_col_5_row_1",
+      "label": {
+        "en": "Menu Row 1"
+      }
+    },
+    {
+      "type": "text",
+      "id": "global_footer_title_col_5_row_2",
+      "label": {
+        "en": "Heading Row 2"
+      },
+      "default": {
+        "en": "About"
+      }
+    },
+    {
+      "type": "link_list",
+      "id": "global_footer_menu_col_5_row_2",
+      "label": {
+        "en": "Menu Row 2"
+      }
+    },
     {
       "type": "header",
       "content": {
