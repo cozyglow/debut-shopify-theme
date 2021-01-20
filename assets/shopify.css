@@ -24,7 +24,11 @@
   margin-bottom: 0;
 }
 
-.collection-grid-item__title.h3 {
+.hero__inner .btn {
+  color: var(--color-btn-primary-text);
+}
+
+.hero__inner .mega-title {
   color: var(--color-overlay-title-text);
 }
 
