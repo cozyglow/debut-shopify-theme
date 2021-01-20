@@ -1,0 +1,52 @@
+.page-container {
+  overflow: inherit;
+}
+
+.rte a.nav-link, .rte a.navbar-brand {
+  border-bottom: none;
+}
+
+.rte a.nav-link {
+  padding-bottom: 0.5rem;
+}
+
+.rte a.navbar-brand {
+  padding-bottom: 0.3125rem;
+}
+
+.rte .list-unstyled,
+.rte .navbar-nav {
+  list-style: none;
+  margin-left: 0;
+}
+
+.rte .navbar-nav {
+  margin-bottom: 0;
+}
+
+.hero__inner .btn {
+  color: var(--color-btn-primary-text);
+}
+
+.hero__inner .mega-title {
+  color: var(--color-overlay-title-text);
+}
+
+.slideshow__text-content .slideshow__btn {
+  color: var(--color-btn-primary-text);
+}
+
+.slideshow__text-content .slideshow__title {
+  color: var(--color-overlay-title-text);
+}
+
+#shopify-product-reviews.container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#shopify-product-reviews .spr-container,
+#shopify-product-reviews .spr-review {
+  border: none;
+}
+/*# sourceMappingURL=shopify.css.map */
