@@ -1,1 +1,814 @@
-{"current":{"sections":{"header":{"type":"header","settings":{}},"hero-1":{"type":"hero","settings":{"hero_size":"large","text_size":"large"}},"feature-row":{"type":"feature-row","settings":{}},"feature-columns":{"type":"feature-columns","blocks":{"feature-columns-0":{"type":"text_block","settings":{}},"feature-columns-1":{"type":"text_block","settings":{}},"feature-columns-2":{"type":"text_block","settings":{}}},"block_order":["feature-columns-0","feature-columns-1","feature-columns-2"],"settings":{"title":""}},"collection":{"type":"collection","settings":{"grid":4}},"hero-2":{"type":"hero","settings":{"text_size":"large"}},"quotes":{"type":"quotes","blocks":{"quotes-0":{"type":"quote","settings":{}},"quotes-1":{"type":"quote","settings":{}},"quotes-2":{"type":"quote","settings":{}}},"block_order":["quotes-0","quotes-1","quotes-2"],"settings":{"title":""}},"image-bar":{"type":"image-bar","blocks":{"image-bar-0":{"type":"image","settings":{}},"image-bar-1":{"type":"image","settings":{}},"image-bar-2":{"type":"image","settings":{}}},"block_order":["image-bar-0","image-bar-1","image-bar-2"],"settings":{}},"footer":{"type":"footer","blocks":{"footer-0":{"type":"link_list","settings":{}},"footer-1":{"type":"newsletter","settings":{}}},"block_order":["footer-0","footer-1"],"settings":{"show_payment_icons":true}}},"content_for_index":["hero-1","feature-row","feature-columns","collection","hero-2","quotes","image-bar"]},"presets":{"Default":{"sections":{"header":{"type":"header","settings":{}},"hero-1":{"type":"hero","settings":{"hero_size":"large","text_size":"large"}},"feature-row":{"type":"feature-row","settings":{}},"feature-columns":{"type":"feature-columns","blocks":{"feature-columns-0":{"type":"text_block","settings":{}},"feature-columns-1":{"type":"text_block","settings":{}},"feature-columns-2":{"type":"text_block","settings":{}}},"block_order":["feature-columns-0","feature-columns-1","feature-columns-2"],"settings":{"title":""}},"collection":{"type":"collection","settings":{"grid":4}},"hero-2":{"type":"hero","settings":{"text_size":"large"}},"quotes":{"type":"quotes","blocks":{"quotes-0":{"type":"quote","settings":{}},"quotes-1":{"type":"quote","settings":{}},"quotes-2":{"type":"quote","settings":{}}},"block_order":["quotes-0","quotes-1","quotes-2"],"settings":{"title":""}},"image-bar":{"type":"image-bar","blocks":{"image-bar-0":{"type":"image","settings":{}},"image-bar-1":{"type":"image","settings":{}},"image-bar-2":{"type":"image","settings":{}}},"block_order":["image-bar-0","image-bar-1","image-bar-2"],"settings":{}},"footer":{"type":"footer","blocks":{"footer-0":{"type":"link_list","settings":{}},"footer-1":{"type":"newsletter","settings":{}}},"block_order":["footer-0","footer-1"],"settings":{"show_payment_icons":true}}},"content_for_index":["hero-1","feature-row","feature-columns","collection","hero-2","quotes","image-bar"]},"Light":{"color_text":"#162950","color_body_text":"#6d6d6d","color_sale_text":"#DA2F0C","color_borders":"#e4e4e4","color_button":"#DA2F0C","color_button_text":"#ffffff","color_small_button_text_border":"#162950","color_text_field":"#ffffff","color_text_field_text":"#162950","color_text_field_border":"#909090","color_image_overlay_text":"#ffffff","color_image_overlay":"#3d3d3d","image_overlay_opacity":40,"color_body_bg":"#f8f8f8","type_header_font":"muli_n6","type_header_base_size":26,"type_base_font":"muli_n4","type_base_size":18,"share_facebook":true,"share_twitter":true,"share_pinterest":true,"social_twitter_link":"","social_facebook_link":"","social_pinterest_link":"","social_instagram_link":"","social_tumblr_link":"","social_snapchat_link":"","social_youtube_link":"","social_vimeo_link":"","favicon":"","checkout_header_image":"","checkout_logo_image":"","checkout_logo_position":"left","checkout_logo_size":"small","checkout_body_background_image":"","checkout_body_background_color":"#ffffff","checkout_input_background_color_mode":"white","checkout_sidebar_background_image":"","checkout_sidebar_background_color":"#e8f3f6","checkout_heading_font":"Roboto","checkout_body_font":"Source Sans Pro","checkout_accent_color":"#1990c6","checkout_button_color":"#23314e","checkout_error_color":"#ff6d6d","sections":{"header":{"type":"header","settings":{"align_logo":"left","logo":"","logo_max_width":135,"main_linklist":"main-menu","message":true,"color_bg":"#162950","color_text":"#ffffff"}},"hero":{"type":"hero","settings":{"alignment":"center","hero_size":"x-large","text_size":"large"}},"slideshow":{"type":"slideshow","blocks":{"slideshow-0":{"type":"image","settings":{"image":"","alignment":"center center"}},"1492095993817":{"type":"image","settings":{"image":"","alignment":"center"}}},"block_order":["slideshow-0","1492095993817"],"settings":{"slideshow_height":"medium","text_size":"medium","autorotate":false,"autorotate_speed":5}},"featured-collections":{"type":"collection","settings":{"grid":3,"rows":1,"show_vendor":true,"show_view_all":true}},"product-template":{"type":"product-template","settings":{"show_quantity_selector":false,"show_vendor":false,"show_share_buttons":true,"media_size":"medium","enable_image_zoom":true,"enable_video_looping":false}},"collection-template":{"type":"collection-template","settings":{"layout":"grid","grid":2,"rows":2,"show_collection_image":true,"show_vendor":false,"sort_enable":true,"tags_enable":true}},"1492033809691":{"type":"map","settings":{}},"1492033877875":{"type":"quotes","blocks":{"1492033877875-0":{"type":"quote","settings":{}}},"block_order":["1492033877875-0"],"settings":{}},"1492033924902":{"type":"custom-content","blocks":{"1492033924902-0":{"type":"text","settings":{"width":"100%","alignment":"center","align_text":"center"}}},"block_order":["1492033924902-0"],"settings":{"title":""}},"1492096252560":{"type":"collection-list","blocks":{"1492096252560-0":{"type":"featured_collection","settings":{}},"1492096252560-1":{"type":"featured_collection","settings":{}},"1492096252560-2":{"type":"featured_collection","settings":{}}},"block_order":["1492096252560-0","1492096252560-1","1492096252560-2"],"settings":{"grid":3}},"blog-template":{"type":"blog-template","settings":{"layout":"grid","blog_show_author":true,"blog_show_date":false}},"article-template":{"type":"article-template","settings":{"blog_show_author":true,"blog_show_date":true,"show_share_buttons":true}},"cart-template":{"type":"cart-template","settings":{"cart_notes_enable":false}},"footer":{"type":"footer","blocks":{"link_list":{"type":"link_list","settings":{}},"text":{"type":"text","settings":{}},"newsletter":{"type":"newsletter","settings":{}}},"block_order":["link_list","text","newsletter"],"settings":{"color_footer_bg":"#f8f8f8","color_footer_text":"#6d6d6d"}}},"content_for_index":["hero","featured-collections","slideshow","1492033924902","1492096252560","1492033877875","1492033809691"]}}}
+{
+  "current": {
+    "color_text": "#000000",
+    "color_body_text": "#000000",
+    "color_sale_text": "#6f3140",
+    "color_button": "#000000",
+    "color_button_text": "#ffffff",
+    "color_small_button_text_border": "#3a3a3a",
+    "color_text_field_text": "#000000",
+    "color_text_field_border": "#cccccc",
+    "color_text_field": "#ffffff",
+    "color_image_overlay_text": "#f3eee9",
+    "color_image_overlay": "#482100",
+    "image_overlay_opacity": 25,
+    "color_borders": "#000000",
+    "color_body_bg": "#ffffff",
+    "type_header_font": "helvetica_n7",
+    "type_header_base_size": 26,
+    "type_base_font": "helvetica_n4",
+    "type_base_size": 16,
+    "predictive_search_enabled": true,
+    "predictive_search_show_vendor": false,
+    "predictive_search_show_price": false,
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": true,
+    "social_twitter_link": "https:\/\/twitter.com\/CozyGlow",
+    "social_facebook_link": "https:\/\/facebook.com\/CozyGlow",
+    "social_pinterest_link": "https:\/\/pinterest.com\/CozyGlowCandles",
+    "social_instagram_link": "https:\/\/instagram.com\/CozyGlowCandles",
+    "social_tumblr_link": "",
+    "social_snapchat_link": "",
+    "social_youtube_link": "",
+    "social_vimeo_link": "",
+    "favicon": "shopify:\/\/shop_images\/Site_Icon.png",
+    "enable_ajax": true,
+    "checkout_header_image": "",
+    "checkout_logo_image": "shopify:\/\/shop_images\/Logo_ad89e474-86d3-4c98-9465-453dd919f816.png",
+    "checkout_logo_position": "center",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#ffffff",
+    "checkout_input_background_color_mode": "transparent",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#000000",
+    "checkout_button_color": "#000000",
+    "checkout_error_color": "#fa4545",
+    "share_image": "",
+    "color_small_button": "#000000",
+    "color_small_button_text": "#d5ba97",
+    "type_header_family": "Google_Work+Sans_600_sans",
+    "type_base_family": "Google_Work+Sans_400_sans",
+    "type_bold_product_titles": true,
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "align_logo": "left",
+          "logo": "shopify:\/\/shop_images\/Logo_bf823038-c5e8-4c37-9513-28ab9e7defbf.png",
+          "logo_max_width": 245,
+          "main_linklist": "main-menu",
+          "message": true,
+          "home_page_only": true,
+          "message_text": "Please allow extra time for delivery, so we and our delivery partners can all be safe.",
+          "message_link": "shopify:\/\/pages\/shop-help-returns-refund",
+          "color_bg": "#ffffff",
+          "color_text": "#1d1d1f",
+          "ribbon_message": true,
+          "ribbon_message_text": "<p><a href=\"\/\" title=\"\/\">Shop online<\/a> and get contactless delivery, Specialist help and&nbsp;more.<\/p>",
+          "ribbon_message_link": "",
+          "ribbon_theme": "light"
+        }
+      },
+      "hero": {
+        "type": "hero",
+        "disabled": true,
+        "settings": {
+          "image": "shopify:\/\/shop_images\/Hero_48444_-_Home.jpg",
+          "alignment": "bottom",
+          "hero_layout": "full_width",
+          "hero_size": "medium",
+          "text_size": "large",
+          "title": "Handmade, Hand Poured Scented Soy Candles",
+          "text": "<p>Made in the UK with natural oils and ethically produced soy wax.&nbsp;<\/p>",
+          "button_label": "Get yours now!",
+          "button_link": "shopify:\/\/collections\/cozy-glow"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "1593285396393": {
+            "type": "link_list",
+            "settings": {
+              "title": "",
+              "menu": "footer"
+            }
+          }
+        },
+        "block_order": [
+          "1593285396393"
+        ],
+        "settings": {
+          "show_payment_icons": false,
+          "color_footer_bg": "#f6f6f6",
+          "color_footer_text": "#333232",
+          "show_locale_selector": true,
+          "show_currency_selector": true
+        }
+      },
+      "1526913524314": {
+        "type": "collection-list",
+        "blocks": {
+          "1555421843118": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "new"
+            }
+          },
+          "1563454976138": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "christmas"
+            }
+          },
+          "1526913524314-0": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "soy-candles"
+            }
+          },
+          "1527017428124": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "soy-wax-melts"
+            }
+          },
+          "1526913524314-1": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "bath-beauty"
+            }
+          },
+          "1527017377574": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "home-fragrance"
+            }
+          },
+          "1558362988517": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "dock-bay-towels"
+            }
+          },
+          "1579277150952": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "the-barking-bakery"
+            }
+          },
+          "1579277171334": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "yodeyma"
+            }
+          },
+          "1536237644960": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "for-her"
+            }
+          },
+          "1527017438493": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "gifts"
+            }
+          },
+          "1527017414730": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "home-kitchen"
+            }
+          }
+        },
+        "block_order": [
+          "1555421843118",
+          "1563454976138",
+          "1526913524314-0",
+          "1527017428124",
+          "1526913524314-1",
+          "1527017377574",
+          "1558362988517",
+          "1579277150952",
+          "1579277171334",
+          "1536237644960",
+          "1527017438493",
+          "1527017414730"
+        ],
+        "settings": {
+          "title": "Collections",
+          "grid": 4
+        }
+      },
+      "1526913612528": {
+        "type": "hero",
+        "disabled": true,
+        "settings": {
+          "image": "shopify:\/\/shop_images\/Try-These-Easy-Home-Remedies-and-Natural-Treatments-to-Ease-Sciatica-Pain_Main_2700x_e9984b2f-5306-4a62-a8be-180a15d8d27a.jpg",
+          "alignment": "center",
+          "hero_layout": "full_width",
+          "hero_size": "medium",
+          "text_size": "medium",
+          "title": "Inspired by Nature",
+          "text": "<p>Truly natural ingredients, fantastic scents and a full aromatherapy experience.<\/p>",
+          "button_label": "",
+          "button_link": ""
+        }
+      },
+      "1526913996906": {
+        "type": "hero",
+        "disabled": true,
+        "settings": {
+          "image": "shopify:\/\/shop_images\/IMG_0784.jpeg",
+          "alignment": "center",
+          "hero_layout": "full_width",
+          "hero_size": "medium",
+          "text_size": "medium",
+          "title": "Bath Bomb Heaven",
+          "text": "<p>Our bath bombs are sure to add a surprise to your bath.<\/p>",
+          "button_label": "Buy",
+          "button_link": "shopify:\/\/collections\/bath-bombs-1"
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "show_quantity_selector": true,
+          "show_vendor": false,
+          "enable_payment_button": true,
+          "show_share_buttons": true,
+          "media_size": "medium",
+          "enable_image_zoom": true,
+          "enable_video_looping": true
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "layout": "grid",
+          "grid": 4,
+          "rows": 8,
+          "show_collection_image": true,
+          "show_vendor": false,
+          "sort_enable": true,
+          "tags_enable": false
+        }
+      },
+      "list-collections-template": {
+        "type": "list-collections-template",
+        "blocks": {
+          "1526914756518": {
+            "type": "collection",
+            "settings": {
+              "collection": "soy-candles"
+            }
+          },
+          "1526914813100": {
+            "type": "collection",
+            "settings": {
+              "collection": ""
+            }
+          },
+          "1526914821954": {
+            "type": "collection",
+            "settings": {
+              "collection": "body-wash"
+            }
+          }
+        },
+        "block_order": [
+          "1526914756518",
+          "1526914813100",
+          "1526914821954"
+        ],
+        "settings": {
+          "display_type": "selected",
+          "sort": "products_high",
+          "grid": 2
+        }
+      },
+      "blog-template": {
+        "type": "blog-template",
+        "settings": {
+          "layout": "grid",
+          "blog_show_author": false,
+          "blog_show_date": true
+        }
+      },
+      "cart-template": {
+        "type": "cart-template",
+        "settings": {
+          "cart_ajax_enable": true,
+          "cart_notes_enable": true
+        }
+      },
+      "1528114716878": {
+        "type": "slideshow",
+        "blocks": {
+          "1586202987122": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/IMG_3921_copy.JPG",
+              "alignment": "center center",
+              "slide_title": "Soy Candle Bundle Builder",
+              "subheading": "Pick Any Scent, Any Size and Save £!",
+              "button_label": "Start Choosing Now!",
+              "button_link": "https:\/\/cozy-glow.myshopify.com\/apps\/bundles\/bundle\/43620"
+            }
+          },
+          "1581763707402": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/119461182_745565376002885_3261394978118019728_n.jpg",
+              "alignment": "center center",
+              "slide_title": "Top Selling Yodeyma Perfumes",
+              "subheading": "Your Favourite Fragrances, Fantastic Value, Fast Free Delivery",
+              "button_label": "Experience them for yourself!",
+              "button_link": "shopify:\/\/collections\/yodeyma"
+            }
+          },
+          "1600168527892": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/IMG_9769.JPG",
+              "alignment": "center center",
+              "slide_title": "Try our new collection of Christmas Decs, Kitchen Gadgets featuring whimsical design twists.",
+              "subheading": "",
+              "button_label": "Explore Now",
+              "button_link": "shopify:\/\/collections\/new"
+            }
+          },
+          "1588931070838": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Hero.png",
+              "alignment": "center center",
+              "slide_title": "Soy Wax Melt Bundle Builder",
+              "subheading": "Long Lasting, Highly Fragranced 100 Hour Wax Melts",
+              "button_label": "Get yours now!",
+              "button_link": "https:\/\/cozy-glow.myshopify.com\/products\/soy-wax-melt-collection"
+            }
+          },
+          "1528983095485": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/brown-packing-being-shipped.jpg",
+              "alignment": "center",
+              "slide_title": "Free Fast Delivery On Orders Over £25",
+              "subheading": "48 hour shipping for all in stock items",
+              "button_label": "Shop Now",
+              "button_link": "shopify:\/\/collections\/new"
+            }
+          }
+        },
+        "block_order": [
+          "1586202987122",
+          "1581763707402",
+          "1600168527892",
+          "1588931070838",
+          "1528983095485"
+        ],
+        "settings": {
+          "slideshow_height": "small",
+          "text_size": "medium",
+          "text_alignment": "center center",
+          "show_overlay": true,
+          "autorotate": true,
+          "autorotate_speed": 3
+        }
+      },
+      "1529144011166": {
+        "type": "map",
+        "disabled": true,
+        "settings": {
+          "heading": "Our store",
+          "address": "<p><strong>Cozy Glow Home<\/strong><\/p>\n<p>160 Brighton Road.<br>Coulsdon, CR5 2NE<\/p>\n<p>Monday - Saturday, 10 am - 5 pm<br>Sunday, Closed<\/p>",
+          "map_address": "Cozy Glow Home, 160 Brighton Road. Coulsdon, CR5 2NE, United Kingdom",
+          "button_text": "Get directions",
+          "show_pin": true,
+          "api_key": "AIzaSyBEdyt7pzcIL7YPykyo5Mqu0ZJ-zKiCSm0",
+          "background_image": "shopify:\/\/shop_images\/antique-binoculars-and-map.jpg",
+          "background_image_position": "center center"
+        }
+      },
+      "1529509611374": {
+        "type": "hero",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/candle-burning-by-bubble-bath.jpg",
+          "alignment": "center",
+          "hero_layout": "full_width",
+          "hero_size": "small",
+          "text_size": "medium",
+          "title": "The Cozy Glow Guarantee",
+          "text": "<p>We're confident in our products, so if you don't love your candle, reed diffuser or room spray&nbsp;get your <strong>money back<\/strong> -<strong> guaranteed<\/strong>!<\/p>\n<p><\/p>\n<p><strong>Lowest Price Promise<br><\/strong>You will always get the lowest price and best offers direct!<\/p>\n<p><\/p>",
+          "button_label": "Learn More",
+          "button_link": "shopify:\/\/pages\/legal-guarantee"
+        }
+      },
+      "1557936067463": {
+        "type": "rich-text",
+        "disabled": true,
+        "settings": {
+          "full_width": false,
+          "section_title": "Cozy Glow's approach to reopening our stores",
+          "text": "<p><a href=\"\/blogs\/letters\/store-opening-letter\" title=\"Store Opening Letter\">Read the letter<\/a><\/p>",
+          "text_size": "small"
+        }
+      },
+      "1561969867882": {
+        "type": "hero",
+        "disabled": true,
+        "settings": {
+          "image": "shopify:\/\/shop_images\/Hero_-_Site.png",
+          "alignment": "center",
+          "hero_layout": "full_width",
+          "hero_size": "x-small",
+          "text_size": "large",
+          "title": "Let us know your thoughts.",
+          "text": "<p><strong><span style=\"text-decoration: none;\">Thanks for taking time out to tell us more about you and your candle preferences.<\/span><\/strong><\/p>\n<p><span style=\"text-decoration: none;\">Help us improve our candles so we can make them better for you.<\/span><br><span style=\"text-decoration: none;\">By completing our questionnaire you could win some of our prizes.<\/span><\/p>",
+          "button_label": "Okay, let's go",
+          "button_link": "shopify:\/\/pages\/candle-container-research-survey"
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "show_product_recommendations": true,
+          "heading": "You may also like",
+          "show_vendor": false
+        }
+      },
+      "article-template": {
+        "type": "article-template",
+        "settings": {
+          "blog_show_author": true,
+          "blog_show_date": true,
+          "show_share_buttons": true
+        }
+      },
+      "1592299963049": {
+        "type": "custom-content",
+        "blocks": {
+          "1592299975797": {
+            "type": "html",
+            "settings": {
+              "code": "<a href=\"https:\/\/ecologi.com\/cozyglow\" target=\"_blank\" rel=\"noopener noreferrer\" title=\"View our Ecologi profile\">\n  <img class=\"img-fluid\" alt=\"We offset our carbon footprint via Ecologi\" src=\"https:\/\/toolkit.ecologi.com\/badges\/cpw\/5e4bf29fb2ae090016bd9ef2?black=true&amp;landscape=true\">\n<\/a>",
+              "width": "50%"
+            }
+          },
+          "1592300037798": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/youtu.be\/nuH-ELqCN3E",
+              "width": "50%",
+              "alignment": "center"
+            }
+          }
+        },
+        "block_order": [
+          "1592299975797",
+          "1592300037798"
+        ],
+        "settings": {
+          "title": "Environment"
+        }
+      },
+      "1594304516891": {
+        "type": "custom-content",
+        "blocks": {
+          "1594304543810": {
+            "type": "html",
+            "settings": {
+              "code": "<!-- TrustBox script -->\n<script type=\"text\/javascript\" src=\"\/\/widget.trustpilot.com\/bootstrap\/v5\/tp.widget.bootstrap.min.js\" async=\"\"><\/script>\n<!-- End TrustBox script -->\n<!-- TrustBox widget - Starter -->\n<div class=\"trustpilot-widget\" data-locale=\"en-GB\" data-template-id=\"5613c9cde69ddc09340c6beb\" data-businessunit-id=\"5785065f0000ff0005923e35\" data-style-height=\"100%\" data-style-width=\"100%\" data-theme=\"light\">\n  <a href=\"https:\/\/uk.trustpilot.com\/review\/cozyglow.co.uk\" target=\"_blank\" rel=\"noopener\">Trustpilot<\/a>\n<\/div>\n<!-- End TrustBox widget -->",
+              "width": "100%"
+            }
+          }
+        },
+        "block_order": [
+          "1594304543810"
+        ],
+        "settings": {
+          "title": "Trustpilot"
+        }
+      }
+    },
+    "content_for_index": [
+      "1561969867882",
+      "1528114716878",
+      "1526913524314",
+      "1592299963049",
+      "1557936067463",
+      "hero",
+      "1529509611374",
+      "1526913996906",
+      "1526913612528",
+      "1529144011166",
+      "1594304516891"
+    ]
+  },
+  "presets": {
+    "Default": {
+      "color_text": "#3d4246",
+      "color_body_text": "#69727b",
+      "color_sale_text": "#557B97",
+      "color_borders": "#e8e9eb",
+      "color_button": "#557B97",
+      "color_button_text": "#fff",
+      "color_small_button": "#fff",
+      "color_small_button_text": "#3d4246",
+      "color_text_field": "#fff",
+      "color_text_field_text": "#000",
+      "color_image_overlay_text": "#fff",
+      "color_image_overlay": "#3d4246",
+      "image_overlay_opacity": 25,
+      "color_body_bg": "#fff",
+      "type_header_family": "Google_Work+Sans_600_sans",
+      "type_header_base_size": 26,
+      "type_base_family": "Google_Work+Sans_400_sans",
+      "type_base_size": 16,
+      "type_bold_product_titles": false,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {}
+        },
+        "hero": {
+          "type": "hero",
+          "settings": {
+            "text_size": "large"
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slideshow-0": {
+              "type": "image",
+              "settings": {}
+            },
+            "slideshow-1": {
+              "type": "image",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "slideshow-0",
+            "slideshow-1"
+          ],
+          "settings": {}
+        },
+        "featured-collections": {
+          "type": "collection",
+          "settings": {
+            "collection": "frontpage"
+          }
+        },
+        "feature-row": {
+          "type": "feature-row",
+          "settings": {}
+        },
+        "footer": {
+          "type": "footer",
+          "settings": {}
+        }
+      },
+      "content_for_index": [
+        "hero",
+        "featured-collections",
+        "feature-row",
+        "slideshow"
+      ]
+    },
+    "Light": {
+      "color_text": "#162950",
+      "color_body_text": "#6d6d6d",
+      "color_sale_text": "#DA2F0C",
+      "color_borders": "#e4e4e4",
+      "color_button": "#DA2F0C",
+      "color_button_text": "#ffffff",
+      "color_small_button": "#eaeaea",
+      "color_small_button_text": "#162950",
+      "color_text_field": "#ffffff",
+      "color_text_field_text": "#162950",
+      "color_image_overlay_text": "#ffffff",
+      "color_image_overlay": "#3d3d3d",
+      "image_overlay_opacity": 30,
+      "color_body_bg": "#f8f8f8",
+      "type_header_family": "Google_Muli_600_sans",
+      "type_header_base_size": 26,
+      "type_base_family": "Google_Muli_600_sans",
+      "type_base_size": 18,
+      "type_bold_product_titles": true,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "social_tumblr_link": "",
+      "social_snapchat_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "favicon": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "small",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#ffffff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#e8f3f6",
+      "checkout_heading_font": "Roboto",
+      "checkout_body_font": "Source Sans Pro",
+      "checkout_accent_color": "#1990c6",
+      "checkout_button_color": "#23314e",
+      "checkout_error_color": "#ff6d6d",
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "align_logo": "left",
+            "logo": "",
+            "logo_max_width": 135,
+            "main_linklist": "main-menu",
+            "message": true,
+            "color_bg": "#162950",
+            "color_text": "#ffffff"
+          }
+        },
+        "hero": {
+          "type": "hero",
+          "settings": {
+            "alignment": "center",
+            "hero_size": "x-large",
+            "text_size": "large"
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slideshow-0": {
+              "type": "image",
+              "settings": {
+                "image": "",
+                "alignment": "center"
+              }
+            },
+            "1492095993817": {
+              "type": "image",
+              "settings": {
+                "image": "",
+                "alignment": "center"
+              }
+            }
+          },
+          "block_order": [
+            "slideshow-0",
+            "1492095993817"
+          ],
+          "settings": {
+            "slideshow_height": "medium",
+            "text_size": "medium"
+          }
+        },
+        "featured-collections": {
+          "type": "collection",
+          "settings": {
+            "grid": 3,
+            "rows": 1,
+            "show_vendor": true,
+            "show_view_all": true
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "settings": {
+            "show_payment_icons": true
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_vendor": false,
+            "show_share_buttons": true
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "layout": "grid",
+            "grid": 2,
+            "rows": 2,
+            "show_collection_image": true,
+            "show_vendor": false,
+            "sort_enable": true,
+            "tags_enable": true
+          }
+        },
+        "1492033809691": {
+          "type": "map",
+          "settings": {}
+        },
+        "1492033877875": {
+          "type": "quotes",
+          "blocks": {
+            "1492033877875-0": {
+              "type": "quote",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1492033877875-0"
+          ],
+          "settings": {}
+        },
+        "1492033924902": {
+          "type": "custom-content",
+          "blocks": {
+            "1492033924902-0": {
+              "type": "text",
+              "settings": {
+                "width": "100%",
+                "alignment": "center",
+                "align_text": "center"
+              }
+            }
+          },
+          "block_order": [
+            "1492033924902-0"
+          ],
+          "settings": {
+            "title": ""
+          }
+        },
+        "1492096252560": {
+          "type": "collection-list",
+          "blocks": {
+            "1492096252560-0": {
+              "type": "featured_collection",
+              "settings": {}
+            },
+            "1492096252560-1": {
+              "type": "featured_collection",
+              "settings": {}
+            },
+            "1492096252560-2": {
+              "type": "featured_collection",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1492096252560-0",
+            "1492096252560-1",
+            "1492096252560-2"
+          ],
+          "settings": {
+            "grid": 3
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "layout": "grid",
+            "blog_show_author": true,
+            "blog_show_date": false
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "blog_show_author": true,
+            "blog_show_date": true,
+            "show_share_buttons": true
+          }
+        },
+        "cart-template": {
+          "type": "cart-template",
+          "settings": {
+            "cart_notes_enable": false
+          }
+        }
+      },
+      "content_for_index": [
+        "hero",
+        "featured-collections",
+        "slideshow",
+        "1492033924902",
+        "1492096252560",
+        "1492033877875",
+        "1492033809691"
+      ]
+    }
+  }
+}

@@ -5,7 +5,9 @@
 
   <div {% if cart.item_count == 0 %}class="hide" {% endif %}data-cart-wrapper>
     <div class="cart-header">
-      <h1 class="cart-header__title">{{ 'cart.general.title' | t }}</h1>
+      {% assign title_total_price = bb_total_price | money %}
+      <h1 class="cart-header__title">{{ 'cart.general.title_total_price' | t: total_price: title_total_price }}</h1>
+      <p><strong>{{ 'cart.general.subtitle' | t }}</strong></p>
       <a href="{{ routes.all_products_collection_url }}" class="text-link text-link--accent">
         {{ 'cart.general.continue_shopping' | t }}
       </a>
@@ -15,10 +17,10 @@
       {% render 'bb', type: 'cart' %}
       <table>
         <thead class="cart__row cart__row--heading">
-          <th scope="col">{{ 'cart.label.product' | t }}</th>
-          <th class="text-right" scope="col">{{ 'cart.label.price' | t }}</th>
-          <th class="text-right small--hide" scope="col">{{ 'cart.label.quantity' | t }}</th>
-          <th class="text-right small--hide" scope="col">{{ 'cart.label.total' | t }}</th>
+          <th class="d-none" scope="col">{{ 'cart.label.product' | t }}</th>
+          <th class="text-right d-none" scope="col">{{ 'cart.label.price' | t }}</th>
+          <th class="text-right small--hide d-none" scope="col">{{ 'cart.label.quantity' | t }}</th>
+          <th class="text-right small--hide d-none" scope="col">{{ 'cart.label.total' | t }}</th>
         </thead>
         <tbody data-cart-line-items>
           {%- for item in cart.items -%}
