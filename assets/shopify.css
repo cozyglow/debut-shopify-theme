@@ -33,11 +33,16 @@
 }
 
 .slideshow__text-content .slideshow__btn {
+  background-color: var(--color-btn-primary);
   color: var(--color-btn-primary-text);
 }
 
 .slideshow__text-content .slideshow__title {
   color: var(--color-overlay-title-text);
+}
+
+.slideshow__text-content--mobile .slideshow__title {
+  color: var(--color-text);
 }
 
 #shopify-product-reviews.container {
