@@ -85,7 +85,7 @@
     };
 
     for (stylesheet in stylesheets) {
-      window.performance.mark(stylesheet.name + '.start');
+      window.performance.mark(stylesheets[stylesheet].name + '.start');
     };
 
     function onLoadStylesheet(stylesheet) {
