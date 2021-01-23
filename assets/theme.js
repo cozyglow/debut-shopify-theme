@@ -810,7 +810,8 @@ slate.Variants = (function() {
     _updatePrice: function(variant) {
       if (
         variant.price === this.currentVariant.price &&
-        variant.compare_at_price === this.currentVariant.compare_at_price
+        variant.compare_at_price === this.currentVariant.compare_at_price &&
+        variant.unit_price === this.currentVariant.unit_price
       ) {
         return;
       }
@@ -6843,6 +6844,9 @@ theme.Cart = (function() {
               return;
             }
 
+            // Cache current in-focus element, used later to restore focus
+            var inFocus = document.activeElement;
+
             this._createCart(state);
 
             if (!value) {
@@ -6850,20 +6854,25 @@ theme.Cart = (function() {
               return;
             }
 
-            var lineItem = document.querySelector(
-              "[data-cart-item-key='" + key + "']"
-            );
-
             var item = this.getItem(key, state);
-
-            var inputSelector = this.mql.matches
-              ? selectors.quantityInputDesktop
-              : selectors.quantityInputMobile;
 
             this._updateLiveRegion(item);
 
-            if (!lineItem) return;
-            lineItem.querySelector(inputSelector).focus();
+            // Restore focus to the "equivalent" element after the DOM has been updated
+            if (!inFocus) return;
+            var row = inFocus.closest('[' + attributes.cartItemIndex + ']');
+            if (!row) return;
+            var target = this.container.querySelector(
+              '[' +
+                attributes.cartItemIndex +
+                '="' +
+                row.getAttribute(attributes.cartItemIndex) +
+                '"] [data-role="' +
+                inFocus.getAttribute('data-role') +
+                '"]'
+            );
+            if (!target) return;
+            target.focus();
           }.bind(this)
         )
         .catch(
@@ -8009,6 +8018,9 @@ theme.Product = (function() {
     this.shopifyPaymentButton = container.querySelector(
       this.selectors.shopifyPaymentButton
     );
+    this.priceContainer = container.querySelector(
+      this.selectors.priceContainer
+    );
     this.productPolicies = container.querySelector(
       this.selectors.productPolicies
     );
@@ -8983,7 +8995,7 @@ theme.Product = (function() {
       // update live region
       this._updateLiveRegion(evt);
 
-      this._updatePrice(evt);
+      this._updatePriceComponentStyles(evt);
     },
 
     _updateStoreAvailabilityContent: function(evt) {
@@ -9007,19 +9019,63 @@ theme.Product = (function() {
       this._setActiveThumbnail(sectionMediaId);
     },
 
+    _hidePriceComponent: function() {
+      this.priceContainer.classList.add(this.classes.productUnavailable);
+      this.priceContainer.setAttribute('aria-hidden', true);
+      if (this.productPolicies) {
+        this.productPolicies.classList.add(this.classes.visibilityHidden);
+      }
+    },
+
+    _updatePriceComponentStyles: function(evt) {
+      var variant = evt.detail.variant;
+
+      var unitPriceBaseUnit = this.priceContainer.querySelector(
+        this.selectors.unitPriceBaseUnit
+      );
+
+      if (!this.productState.available) {
+        this._hidePriceComponent();
+        return;
+      }
+
+      if (this.productState.soldOut) {
+        this.priceContainer.classList.add(this.classes.productSoldOut);
+      } else {
+        this.priceContainer.classList.remove(this.classes.productSoldOut);
+      }
+
+      if (this.productState.showUnitPrice) {
+        unitPriceBaseUnit.innerHTML = this._getBaseUnit(variant);
+        this.priceContainer.classList.add(this.classes.productUnitAvailable);
+      } else {
+        this.priceContainer.classList.remove(this.classes.productUnitAvailable);
+      }
+
+      if (this.productState.onSale) {
+        this.priceContainer.classList.add(this.classes.productOnSale);
+      } else {
+        this.priceContainer.classList.remove(this.classes.productOnSale);
+      }
+
+      this.priceContainer.classList.remove(this.classes.productUnavailable);
+      this.priceContainer.removeAttribute('aria-hidden');
+      if (this.productPolicies) {
+        this.productPolicies.classList.remove(this.classes.visibilityHidden);
+      }
+    },
+
     _updatePrice: function(evt) {
       var variant = evt.detail.variant;
 
-      var priceContainer = this.container.querySelector(
-        this.selectors.priceContainer
-      );
-      var regularPrices = priceContainer.querySelectorAll(
+      var regularPrices = this.priceContainer.querySelectorAll(
         this.selectors.regularPrice
       );
-      var salePrice = priceContainer.querySelector(this.selectors.salePrice);
-      var unitPrice = priceContainer.querySelector(this.selectors.unitPrice);
-      var unitPriceBaseUnit = priceContainer.querySelector(
-        this.selectors.unitPriceBaseUnit
+      var salePrice = this.priceContainer.querySelector(
+        this.selectors.salePrice
+      );
+      var unitPrice = this.priceContainer.querySelector(
+        this.selectors.unitPrice
       );
 
       var formatRegularPrice = function(regularPriceElement, price) {
@@ -9029,47 +9085,15 @@ theme.Product = (function() {
         );
       };
 
-      // Reset product price state
-
-      priceContainer.classList.remove(
-        this.classes.productUnavailable,
-        this.classes.productOnSale,
-        this.classes.productUnitAvailable,
-        this.classes.productSoldOut
-      );
-      priceContainer.removeAttribute('aria-hidden');
-
-      if (this.productPolicies) {
-        this.productPolicies.classList.remove(this.classes.visibilityHidden);
-      }
-
-      // Unavailable
-      if (!this.productState.available) {
-        priceContainer.classList.add(this.classes.productUnavailable);
-        priceContainer.setAttribute('aria-hidden', true);
-
-        if (this.productPolicies) {
-          this.productPolicies.classList.add(this.classes.visibilityHidden);
-        }
-        return;
-      }
-
-      // Sold out
-      if (this.productState.soldOut) {
-        priceContainer.classList.add(this.classes.productSoldOut);
-      }
-
       // On sale
       if (this.productState.onSale) {
         regularPrices.forEach(function(regularPrice) {
           formatRegularPrice(regularPrice, variant.compare_at_price);
         });
-
         salePrice.innerHTML = theme.Currency.formatMoney(
           variant.price,
           theme.moneyFormat
         );
-        priceContainer.classList.add(this.classes.productOnSale);
       } else {
         // Regular price
         regularPrices.forEach(function(regularPrice) {
@@ -9083,8 +9107,6 @@ theme.Product = (function() {
           variant.unit_price,
           theme.moneyFormat
         );
-        unitPriceBaseUnit.innerHTML = this._getBaseUnit(variant);
-        priceContainer.classList.add(this.classes.productUnitAvailable);
       }
     },
 

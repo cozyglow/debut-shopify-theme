@@ -1,5 +1,0 @@
-{% capture icon_snippet %}icon-{{ icon }}{% endcapture %}
-{% capture snippet_content %}{% include icon_snippet %}{% endcapture %}
-{% unless snippet_content contains 'Liquid error' %}
-  {{ snippet_content }}
-{% endunless %}
