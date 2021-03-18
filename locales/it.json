@@ -284,7 +284,7 @@
       "order_number_link": "Numero ordine {{ number }}",
       "date": "Data",
       "payment_status": "Stato del pagamento",
-      "fulfillment_status": "Stato di evasione ordine",
+      "fulfillment_status": "Stato di evasione",
       "total": "Totale",
       "none": "Non hai ancora effettuato ordini."
     },
@@ -296,7 +296,7 @@
       "billing_address": "Indirizzo di fatturazione",
       "payment_status": "Stato del pagamento",
       "shipping_address": "Indirizzo Spedizione",
-      "fulfillment_status": "Stato di evasione ordine",
+      "fulfillment_status": "Stato di evasione",
       "discount": "Sconto",
       "shipping": "Spedizione",
       "tax": "Imposta",
@@ -310,19 +310,19 @@
       "track_shipment": "Controlla lo status della spedizione"
     },
     "recover_password": {
-      "title": "Reimposta la tua password",
+      "title": "Ripristina la tua password",
       "email": "Email",
       "submit": "Invia",
       "cancel": "Annulla",
-      "subtext": "Riceverai un'email per reimpostare la tua password.",
+      "subtext": "Riceverai un'email per ripristinare la tua password.",
       "success": "Ti abbiamo inviato un'email con un link per aggiornare la tua password."
     },
     "reset_password": {
-      "title": "Reimposta la tua password",
+      "title": "Ripristina la tua password",
       "subtext": "Inserisci una nuova password per {{ email }}",
       "password": "Password",
       "password_confirm": "Conferma Password",
-      "submit": "Reimposta la password"
+      "submit": "Ripristina la password"
     },
     "register": {
       "title": "Crea account",

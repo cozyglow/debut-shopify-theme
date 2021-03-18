@@ -141,9 +141,9 @@
             {% include 'product-price', variant: current_variant, show_vendor: section.settings.show_vendor %}
           </div>
 
-          {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
+          {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
             <div class="product__policies rte" data-product-policies>
-              {%- if shop.taxes_included -%}
+              {%- if cart.taxes_included -%}
                 {{ 'products.product.include_taxes' | t }}
               {%- endif -%}
               {%- if shop.shipping_policy.body != blank -%}
@@ -299,7 +299,7 @@
     "es": "Páginas de productos",
     "fi": "Tuotesivut",
     "fr": "Pages de produits",
-    "it": "Pagine di prodotto",
+    "it": "Pagine del prodotto",
     "ja": "商品ページ",
     "ko": "제품 페이지",
     "nb": "Produktsider",
@@ -386,7 +386,7 @@
         "ja": "動的チェックアウトボタンを表示する",
         "ko": "동적 결제 버튼 표시",
         "nb": "Vis dynamisk knapp for å gå til kassen",
-        "nl": "Dynamische betaalknop weergeven",
+        "nl": "Dynamische checkoutknop weergeven",
         "pl": "Pokaż dynamiczny przycisk realizacji zakupu",
         "pt-BR": "Exibir botão de checkout dinâmico",
         "pt-PT": "Mostrar o botão dinâmico de finalização da compra",
@@ -522,7 +522,7 @@
         "th": "ขนาด",
         "tr": "Boyut",
         "vi": "Cỡ",
-        "zh-CN": "大小",
+        "zh-CN": "尺寸",
         "zh-TW": "尺寸"
       },
       "options": [

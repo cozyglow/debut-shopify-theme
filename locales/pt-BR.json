@@ -165,8 +165,8 @@
       "savings": "Você está economizando",
       "taxes_and_shipping_at_checkout": "Tributos e frete calculados no checkout",
       "taxes_and_shipping_policy_at_checkout_html": "Tributos e <a href=\"{{ link }}\">frete</a> calculados no checkout",
-      "taxes_included_but_shipping_at_checkout": "Imposto incluído e frete calculado no checkout",
-      "taxes_included_and_shipping_policy_html": "Taxas incluídas. <a href=\"{{ link }}\">Frete</a> calculado no checkout.",
+      "taxes_included_but_shipping_at_checkout": "Tributos incluídos e frete calculado no checkout",
+      "taxes_included_and_shipping_policy_html": "Tributos incluídos. <a href=\"{{ link }}\">Frete</a> calculado no checkout.",
       "update": "Atualizar",
       "checkout": "Finalizar compra",
       "empty": "Seu carrinho está vazio no momento.",
@@ -406,7 +406,7 @@
       "shop_link": "Comece a comprar",
       "print": "Imprimir este cartão-presente",
       "remaining_html": "{{ balance }} restante(s)",
-      "add_to_apple_wallet": "Adicionar ao Apple Wallet",
+      "add_to_apple_wallet": "Adicionar ao app Wallet da Apple",
       "qr_image_alt": "código QR - digitalizar para resgatar cartão de presente"
     }
   },

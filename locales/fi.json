@@ -158,7 +158,7 @@
   "cart": {
     "general": {
       "title": "Ostoskorisi",
-      "note": "Lisää huomautus tilaukseesi",
+      "note": "Lisää kommentti tilaukseesi",
       "removed_item_html": "<span class=\"cart__removed-product-details\">({{ quantity }}) {{ link }}</span> on poistettu ostoskorista.",
       "remove": "Poista",
       "subtotal": "Välisumma",

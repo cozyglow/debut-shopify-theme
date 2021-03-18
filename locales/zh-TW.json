@@ -301,7 +301,7 @@
       "shipping": "運送",
       "tax": "稅金",
       "product": "產品",
-      "sku": "SKU",
+      "sku": "存貨單位 (SKU)",
       "price": "價格",
       "quantity": "數量",
       "total": "總計",

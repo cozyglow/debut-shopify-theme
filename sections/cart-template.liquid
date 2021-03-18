@@ -263,9 +263,9 @@
             </div>
 
             {%- capture taxes_shipping_checkout -%}
-              {%- if shop.taxes_included and shop.shipping_policy.body != blank -%}
+              {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
                 {{ 'cart.general.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
-              {%- elsif shop.taxes_included -%}
+              {%- elsif cart.taxes_included -%}
                 {{ 'cart.general.taxes_included_but_shipping_at_checkout' | t }}
               {%- elsif shop.shipping_policy.body != blank -%}
                 {{ 'cart.general.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url }}

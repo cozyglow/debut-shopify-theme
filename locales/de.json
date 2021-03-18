@@ -34,7 +34,7 @@
       "login_form_password_placeholder": "Dein Passwort",
       "login_form_submit": "Betreten",
       "signup_form_email_label": "E-Mail",
-      "signup_form_success": "Wir senden Ihnen eine E-Mail, kurz bevor wir eröffnen!",
+      "signup_form_success": "Wir senden dir eine E-Mail, kurz bevor wir eröffnen!",
       "admin_link_html": "Bist du der Shop-Inhaber? <a href=\"/admin\" class=\"text-link\">Logge dich hier ein</a>",
       "password_link": "Mit Passwort betreten"
     },

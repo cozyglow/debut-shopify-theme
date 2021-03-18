@@ -2760,14 +2760,9 @@ theme.LibraryLoader = (function() {
   var cloudCdn = 'https://cdn.shopify.com/shopifycloud/';
 
   var libraries = {
-    youtubeSdk: {
-      tagId: 'youtube-sdk',
-      src: 'https://www.youtube.com/iframe_api',
-      type: types.script
-    },
     plyrShopifyStyles: {
       tagId: 'plyr-shopify-styles',
-      src: cloudCdn + 'shopify-plyr/v1.0/shopify-plyr.css',
+      src: cloudCdn + 'plyr/v2.0/shopify-plyr.css',
       type: types.link
     },
     modelViewerUiStyles: {
@@ -4971,8 +4966,8 @@ theme.ProductVideo = (function() {
   var videos = {};
 
   var hosts = {
-    html5: 'html5',
-    youtube: 'youtube'
+    shopify: 'shopify',
+    external: 'external'
   };
 
   var selectors = {
@@ -5008,38 +5003,23 @@ theme.ProductVideo = (function() {
       }
     };
 
-    var video = videos[mediaId];
-
-    switch (video.host) {
-      case hosts.html5:
-        window.Shopify.loadFeatures([
-          {
-            name: 'video-ui',
-            version: '1.0',
-            onLoad: setupPlyrVideos
-          }
-        ]);
-        theme.LibraryLoader.load('plyrShopifyStyles');
-        break;
-      case hosts.youtube:
-        theme.LibraryLoader.load('youtubeSdk', setupYouTubeVideos);
-        break;
-    }
+    window.Shopify.loadFeatures([
+      {
+        name: 'video-ui',
+        version: '2.0',
+        onLoad: setupVideos
+      }
+    ]);
+    theme.LibraryLoader.load('plyrShopifyStyles');
   }
 
-  function setupPlyrVideos(errors) {
+  function setupVideos(errors) {
     if (errors) {
       fallbackToNativeVideo();
       return;
     }
 
-    loadVideos(hosts.html5);
-  }
-
-  function setupYouTubeVideos() {
-    if (!window.YT.Player) return;
-
-    loadVideos(hosts.youtube);
+    loadVideos();
   }
 
   function createPlayer(video) {
@@ -5055,39 +5035,14 @@ theme.ProductVideo = (function() {
       'data-' + attributes.enableVideoLooping
     );
 
-    switch (video.host) {
-      case hosts.html5:
-        // eslint-disable-next-line no-undef
-        video.player = new Shopify.Plyr(video.element, {
-          loop: { active: enableLooping }
-        });
-        break;
-      case hosts.youtube:
-        var videoId = productMediaWrapper.getAttribute(
-          'data-' + attributes.videoId
-        );
-
-        video.player = new YT.Player(video.element, {
-          videoId: videoId,
-          events: {
-            onStateChange: function(event) {
-              if (event.data === 0 && enableLooping) event.target.seekTo(0);
-            }
-          }
-        });
-        break;
-    }
+    // eslint-disable-next-line no-undef
+    video.player = new Shopify.Video(video.element, {
+      loop: { active: enableLooping }
+    });
 
     var pauseVideo = function() {
       if (!video.player) return;
-
-      if (video.host === hosts.html5) {
-        video.player.pause();
-      }
-
-      if (video.host === hosts.youtube && video.player.pauseVideo) {
-        video.player.pauseVideo();
-      }
+      video.player.pause();
     };
 
     productMediaWrapper.addEventListener('mediaHidden', pauseVideo);
@@ -5096,41 +5051,23 @@ theme.ProductVideo = (function() {
     productMediaWrapper.addEventListener('mediaVisible', function() {
       if (theme.Helpers.isTouch()) return;
       if (!video.player) return;
-
-      if (video.host === hosts.html5) {
-        video.player.play();
-      }
-
-      if (video.host === hosts.youtube && video.player.playVideo) {
-        video.player.playVideo();
-      }
+      video.player.play();
     });
   }
 
   function hostFromVideoElement(video) {
     if (video.tagName === 'VIDEO') {
-      return hosts.html5;
+      return hosts.shopify;
     }
 
-    if (video.tagName === 'IFRAME') {
-      if (
-        /^(https?:\/\/)?(www\.)?(youtube\.com|youtube-nocookie\.com|youtu\.?be)\/.+$/.test(
-          video.src
-        )
-      ) {
-        return hosts.youtube;
-      }
-    }
-    return null;
+    return hosts.external;
   }
 
-  function loadVideos(host) {
+  function loadVideos() {
     for (var key in videos) {
       if (videos.hasOwnProperty(key)) {
         var video = videos[key];
-        if (video.host === host) {
-          video.ready();
-        }
+        video.ready();
       }
     }
   }
@@ -5142,7 +5079,7 @@ theme.ProductVideo = (function() {
 
         if (video.nativeVideo) continue;
 
-        if (video.host === hosts.html5) {
+        if (video.host === hosts.shopify) {
           video.element.setAttribute('controls', 'controls');
           video.nativeVideo = true;
         }
@@ -9727,7 +9664,6 @@ document.addEventListener('DOMContentLoaded', function() {
 // eslint-disable-next-line no-unused-vars
 function onYouTubeIframeAPIReady() {
   theme.Video.loadVideos();
-  theme.ProductVideo.loadVideos(theme.ProductVideo.hosts.youtube);
 }
 
 function removeImageLoadingAnimation(image) {
