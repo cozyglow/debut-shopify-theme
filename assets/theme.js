@@ -810,7 +810,8 @@ slate.Variants = (function() {
     _updatePrice: function(variant) {
       if (
         variant.price === this.currentVariant.price &&
-        variant.compare_at_price === this.currentVariant.compare_at_price
+        variant.compare_at_price === this.currentVariant.compare_at_price &&
+        variant.unit_price === this.currentVariant.unit_price
       ) {
         return;
       }
@@ -2759,14 +2760,9 @@ theme.LibraryLoader = (function() {
   var cloudCdn = 'https://cdn.shopify.com/shopifycloud/';
 
   var libraries = {
-    youtubeSdk: {
-      tagId: 'youtube-sdk',
-      src: 'https://www.youtube.com/iframe_api',
-      type: types.script
-    },
     plyrShopifyStyles: {
       tagId: 'plyr-shopify-styles',
-      src: cloudCdn + 'shopify-plyr/v1.0/shopify-plyr.css',
+      src: cloudCdn + 'plyr/v2.0/shopify-plyr.css',
       type: types.link
     },
     modelViewerUiStyles: {
@@ -4970,8 +4966,8 @@ theme.ProductVideo = (function() {
   var videos = {};
 
   var hosts = {
-    html5: 'html5',
-    youtube: 'youtube'
+    shopify: 'shopify',
+    external: 'external'
   };
 
   var selectors = {
@@ -5007,38 +5003,23 @@ theme.ProductVideo = (function() {
       }
     };
 
-    var video = videos[mediaId];
-
-    switch (video.host) {
-      case hosts.html5:
-        window.Shopify.loadFeatures([
-          {
-            name: 'video-ui',
-            version: '1.0',
-            onLoad: setupPlyrVideos
-          }
-        ]);
-        theme.LibraryLoader.load('plyrShopifyStyles');
-        break;
-      case hosts.youtube:
-        theme.LibraryLoader.load('youtubeSdk', setupYouTubeVideos);
-        break;
-    }
+    window.Shopify.loadFeatures([
+      {
+        name: 'video-ui',
+        version: '2.0',
+        onLoad: setupVideos
+      }
+    ]);
+    theme.LibraryLoader.load('plyrShopifyStyles');
   }
 
-  function setupPlyrVideos(errors) {
+  function setupVideos(errors) {
     if (errors) {
       fallbackToNativeVideo();
       return;
     }
 
-    loadVideos(hosts.html5);
-  }
-
-  function setupYouTubeVideos() {
-    if (!window.YT.Player) return;
-
-    loadVideos(hosts.youtube);
+    loadVideos();
   }
 
   function createPlayer(video) {
@@ -5054,39 +5035,14 @@ theme.ProductVideo = (function() {
       'data-' + attributes.enableVideoLooping
     );
 
-    switch (video.host) {
-      case hosts.html5:
-        // eslint-disable-next-line no-undef
-        video.player = new Shopify.Plyr(video.element, {
-          loop: { active: enableLooping }
-        });
-        break;
-      case hosts.youtube:
-        var videoId = productMediaWrapper.getAttribute(
-          'data-' + attributes.videoId
-        );
-
-        video.player = new YT.Player(video.element, {
-          videoId: videoId,
-          events: {
-            onStateChange: function(event) {
-              if (event.data === 0 && enableLooping) event.target.seekTo(0);
-            }
-          }
-        });
-        break;
-    }
+    // eslint-disable-next-line no-undef
+    video.player = new Shopify.Video(video.element, {
+      loop: { active: enableLooping }
+    });
 
     var pauseVideo = function() {
       if (!video.player) return;
-
-      if (video.host === hosts.html5) {
-        video.player.pause();
-      }
-
-      if (video.host === hosts.youtube && video.player.pauseVideo) {
-        video.player.pauseVideo();
-      }
+      video.player.pause();
     };
 
     productMediaWrapper.addEventListener('mediaHidden', pauseVideo);
@@ -5095,41 +5051,23 @@ theme.ProductVideo = (function() {
     productMediaWrapper.addEventListener('mediaVisible', function() {
       if (theme.Helpers.isTouch()) return;
       if (!video.player) return;
-
-      if (video.host === hosts.html5) {
-        video.player.play();
-      }
-
-      if (video.host === hosts.youtube && video.player.playVideo) {
-        video.player.playVideo();
-      }
+      video.player.play();
     });
   }
 
   function hostFromVideoElement(video) {
     if (video.tagName === 'VIDEO') {
-      return hosts.html5;
+      return hosts.shopify;
     }
 
-    if (video.tagName === 'IFRAME') {
-      if (
-        /^(https?:\/\/)?(www\.)?(youtube\.com|youtube-nocookie\.com|youtu\.?be)\/.+$/.test(
-          video.src
-        )
-      ) {
-        return hosts.youtube;
-      }
-    }
-    return null;
+    return hosts.external;
   }
 
-  function loadVideos(host) {
+  function loadVideos() {
     for (var key in videos) {
       if (videos.hasOwnProperty(key)) {
         var video = videos[key];
-        if (video.host === host) {
-          video.ready();
-        }
+        video.ready();
       }
     }
   }
@@ -5141,7 +5079,7 @@ theme.ProductVideo = (function() {
 
         if (video.nativeVideo) continue;
 
-        if (video.host === hosts.html5) {
+        if (video.host === hosts.shopify) {
           video.element.setAttribute('controls', 'controls');
           video.nativeVideo = true;
         }
@@ -6843,6 +6781,9 @@ theme.Cart = (function() {
               return;
             }
 
+            // Cache current in-focus element, used later to restore focus
+            var inFocus = document.activeElement;
+
             this._createCart(state);
 
             if (!value) {
@@ -6850,20 +6791,25 @@ theme.Cart = (function() {
               return;
             }
 
-            var lineItem = document.querySelector(
-              "[data-cart-item-key='" + key + "']"
-            );
-
             var item = this.getItem(key, state);
-
-            var inputSelector = this.mql.matches
-              ? selectors.quantityInputDesktop
-              : selectors.quantityInputMobile;
 
             this._updateLiveRegion(item);
 
-            if (!lineItem) return;
-            lineItem.querySelector(inputSelector).focus();
+            // Restore focus to the "equivalent" element after the DOM has been updated
+            if (!inFocus) return;
+            var row = inFocus.closest('[' + attributes.cartItemIndex + ']');
+            if (!row) return;
+            var target = this.container.querySelector(
+              '[' +
+                attributes.cartItemIndex +
+                '="' +
+                row.getAttribute(attributes.cartItemIndex) +
+                '"] [data-role="' +
+                inFocus.getAttribute('data-role') +
+                '"]'
+            );
+            if (!target) return;
+            target.focus();
           }.bind(this)
         )
         .catch(
@@ -8009,6 +7955,9 @@ theme.Product = (function() {
     this.shopifyPaymentButton = container.querySelector(
       this.selectors.shopifyPaymentButton
     );
+    this.priceContainer = container.querySelector(
+      this.selectors.priceContainer
+    );
     this.productPolicies = container.querySelector(
       this.selectors.productPolicies
     );
@@ -8983,7 +8932,7 @@ theme.Product = (function() {
       // update live region
       this._updateLiveRegion(evt);
 
-      this._updatePrice(evt);
+      this._updatePriceComponentStyles(evt);
     },
 
     _updateStoreAvailabilityContent: function(evt) {
@@ -9007,19 +8956,63 @@ theme.Product = (function() {
       this._setActiveThumbnail(sectionMediaId);
     },
 
+    _hidePriceComponent: function() {
+      this.priceContainer.classList.add(this.classes.productUnavailable);
+      this.priceContainer.setAttribute('aria-hidden', true);
+      if (this.productPolicies) {
+        this.productPolicies.classList.add(this.classes.visibilityHidden);
+      }
+    },
+
+    _updatePriceComponentStyles: function(evt) {
+      var variant = evt.detail.variant;
+
+      var unitPriceBaseUnit = this.priceContainer.querySelector(
+        this.selectors.unitPriceBaseUnit
+      );
+
+      if (!this.productState.available) {
+        this._hidePriceComponent();
+        return;
+      }
+
+      if (this.productState.soldOut) {
+        this.priceContainer.classList.add(this.classes.productSoldOut);
+      } else {
+        this.priceContainer.classList.remove(this.classes.productSoldOut);
+      }
+
+      if (this.productState.showUnitPrice) {
+        unitPriceBaseUnit.innerHTML = this._getBaseUnit(variant);
+        this.priceContainer.classList.add(this.classes.productUnitAvailable);
+      } else {
+        this.priceContainer.classList.remove(this.classes.productUnitAvailable);
+      }
+
+      if (this.productState.onSale) {
+        this.priceContainer.classList.add(this.classes.productOnSale);
+      } else {
+        this.priceContainer.classList.remove(this.classes.productOnSale);
+      }
+
+      this.priceContainer.classList.remove(this.classes.productUnavailable);
+      this.priceContainer.removeAttribute('aria-hidden');
+      if (this.productPolicies) {
+        this.productPolicies.classList.remove(this.classes.visibilityHidden);
+      }
+    },
+
     _updatePrice: function(evt) {
       var variant = evt.detail.variant;
 
-      var priceContainer = this.container.querySelector(
-        this.selectors.priceContainer
-      );
-      var regularPrices = priceContainer.querySelectorAll(
+      var regularPrices = this.priceContainer.querySelectorAll(
         this.selectors.regularPrice
       );
-      var salePrice = priceContainer.querySelector(this.selectors.salePrice);
-      var unitPrice = priceContainer.querySelector(this.selectors.unitPrice);
-      var unitPriceBaseUnit = priceContainer.querySelector(
-        this.selectors.unitPriceBaseUnit
+      var salePrice = this.priceContainer.querySelector(
+        this.selectors.salePrice
+      );
+      var unitPrice = this.priceContainer.querySelector(
+        this.selectors.unitPrice
       );
 
       var formatRegularPrice = function(regularPriceElement, price) {
@@ -9029,47 +9022,15 @@ theme.Product = (function() {
         );
       };
 
-      // Reset product price state
-
-      priceContainer.classList.remove(
-        this.classes.productUnavailable,
-        this.classes.productOnSale,
-        this.classes.productUnitAvailable,
-        this.classes.productSoldOut
-      );
-      priceContainer.removeAttribute('aria-hidden');
-
-      if (this.productPolicies) {
-        this.productPolicies.classList.remove(this.classes.visibilityHidden);
-      }
-
-      // Unavailable
-      if (!this.productState.available) {
-        priceContainer.classList.add(this.classes.productUnavailable);
-        priceContainer.setAttribute('aria-hidden', true);
-
-        if (this.productPolicies) {
-          this.productPolicies.classList.add(this.classes.visibilityHidden);
-        }
-        return;
-      }
-
-      // Sold out
-      if (this.productState.soldOut) {
-        priceContainer.classList.add(this.classes.productSoldOut);
-      }
-
       // On sale
       if (this.productState.onSale) {
         regularPrices.forEach(function(regularPrice) {
           formatRegularPrice(regularPrice, variant.compare_at_price);
         });
-
         salePrice.innerHTML = theme.Currency.formatMoney(
           variant.price,
           theme.moneyFormat
         );
-        priceContainer.classList.add(this.classes.productOnSale);
       } else {
         // Regular price
         regularPrices.forEach(function(regularPrice) {
@@ -9083,8 +9044,6 @@ theme.Product = (function() {
           variant.unit_price,
           theme.moneyFormat
         );
-        unitPriceBaseUnit.innerHTML = this._getBaseUnit(variant);
-        priceContainer.classList.add(this.classes.productUnitAvailable);
       }
     },
 
@@ -9705,7 +9664,6 @@ document.addEventListener('DOMContentLoaded', function() {
 // eslint-disable-next-line no-unused-vars
 function onYouTubeIframeAPIReady() {
   theme.Video.loadVideos();
-  theme.ProductVideo.loadVideos(theme.ProductVideo.hosts.youtube);
 }
 
 function removeImageLoadingAnimation(image) {
