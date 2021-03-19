@@ -1,0 +1,10 @@
+{% comment %}
+  Usage:
+  {% include 'icon', icon: 'icon' %}
+{% endcomment %}
+
+{% capture icon_snippet %}icon-{{ icon }}{% endcapture %}
+{% capture snippet_content %}{% include icon_snippet %}{% endcapture %}
+{% unless snippet_content contains 'Liquid error' %}
+  {{ snippet_content }}
+{% endunless %}
