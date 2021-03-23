@@ -9527,7 +9527,7 @@ document.addEventListener('DOMContentLoaded', function() {
   sections.register('product', theme.Product);
   sections.register('collection-template', theme.Filters);
   sections.register('product-template', theme.Product);
-  sections.register('header-section', theme.HeaderSection);
+  //sections.register('header-section', theme.HeaderSection);
   sections.register('map', theme.Maps);
   sections.register('slideshow-section', theme.SlideshowSection);
   sections.register('store-availability', theme.StoreAvailability);
