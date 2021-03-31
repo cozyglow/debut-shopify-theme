@@ -1,0 +1,22 @@
+{% comment %}
+  Usage:
+  {% include 'ribbon' %}
+
+  Dependencies:
+  - /assets/bootstrap.bundle.min.js
+  - /snippets/ribbon_schema.json
+{% endcomment %}
+
+{% if section.settings.ribbon_message %}
+  {% if section.settings.home_page_only == false or request.page_type == 'index' %}
+    {% unless section.settings.ribbon_message_link == blank %}
+      <a href="{{ section.settings.ribbon_message_link }}">
+    {% endunless %}
+    <div class="alert alert-full mb-0 text-center alert-{{ section.settings.ribbon_theme }}" role="alert">
+      {{ section.settings.ribbon_message_text }}
+    </div>
+    {% unless section.settings.ribbon_message_link == blank %}
+      </a>
+    {% endunless %}
+  {% endif %}
+{% endif %}
