@@ -5031,9 +5031,10 @@ theme.ProductVideo = (function() {
       selectors.productMediaWrapper
     );
 
-    var enableLooping = productMediaWrapper.getAttribute(
-      'data-' + attributes.enableVideoLooping
-    );
+    var enableLooping =
+      productMediaWrapper.getAttribute(
+        'data-' + attributes.enableVideoLooping
+      ) === 'true';
 
     // eslint-disable-next-line no-undef
     video.player = new Shopify.Video(video.element, {
@@ -6641,6 +6642,10 @@ theme.Cart = (function() {
     this.ajaxEnabled =
       this.container.getAttribute('data-ajax-enabled') === 'true';
 
+    this.cartRoutes = JSON.parse(
+      document.querySelector('[data-cart-routes]').innerHTML
+    );
+
     this._handleInputQty = theme.Helpers.debounce(
       this._handleInputQty.bind(this),
       500
@@ -6768,7 +6773,7 @@ theme.Cart = (function() {
         })
       };
 
-      fetch('/cart/change.js', request)
+      fetch(this.cartRoutes.cartChangeUrl + '.js', request)
         .then(function(response) {
           return response.json();
         })
@@ -7427,7 +7432,7 @@ theme.Cart = (function() {
         })
       };
 
-      fetch('/cart/change.js', request)
+      fetch(this.cartRoutes.cartChangeUrl + '.js', request)
         .then(function(response) {
           return response.json();
         })
@@ -7871,7 +7876,7 @@ theme.Product = (function() {
       mediaQuerySmall: 'screen and (max-width: 749px)',
       bpSmall: false,
       enableHistoryState:
-        container.getAttribute('data-enable-history-state') || false,
+        container.getAttribute('data-enable-history-state') === 'true',
       namespace: '.slideshow-' + sectionId,
       sectionId: sectionId,
       sliderActive: false,
@@ -7999,6 +8004,10 @@ theme.Product = (function() {
           )
         : false;
 
+    this.cartRoutes = JSON.parse(
+      document.querySelector('[data-cart-routes]').innerHTML
+    );
+
     this.initMobileBreakpoint = this._initMobileBreakpoint.bind(this);
     this.initDesktopBreakpoint = this._initDesktopBreakpoint.bind(this);
 
@@ -8092,7 +8101,7 @@ theme.Product = (function() {
       var options = {
         container: this.container,
         enableHistoryState:
-          this.container.getAttribute('data-enable-history-state') || false,
+          this.container.getAttribute('data-enable-history-state') === 'true',
         singleOptionSelector: this.selectors.singleOptionSelector,
         originalSelectorId: this.selectors.originalSelectorId,
         product: this.productSingleObject
@@ -8234,7 +8243,7 @@ theme.Product = (function() {
     _addItemToCart: function(form) {
       var self = this;
 
-      fetch('/cart/add.js', {
+      fetch(this.cartRoutes.cartAddUrl + '.js', {
         method: 'POST',
         credentials: 'same-origin',
         headers: {
@@ -8374,7 +8383,7 @@ theme.Product = (function() {
         selling_plan_name
       );
 
-      fetch('/cart.js', { credentials: 'same-origin' })
+      fetch(this.cartRoutes.cartUrl + '.js', { credentials: 'same-origin' })
         .then(function(response) {
           return response.json();
         })
