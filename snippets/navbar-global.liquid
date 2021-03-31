@@ -1,0 +1,305 @@
+{% comment %}
+  Usage:
+  {% include 'navbar-global' %}
+
+  Dependencies:
+  - /assets/main.bundle.min.js
+  - /assets/lodash.min.js
+  - /snippets/icon-bag.liquid
+  - /snippets/icon-gear-wide-connected.liquid
+  - /snippets/icon-person-circle.liquid
+  - /snippets/icon-search.liquid
+{% endcomment %}
+
+<style>
+  .icon {
+    vertical-align: top;
+  }
+</style>
+
+<div sticky-top" role="navigation" data-navbar-global data-search-suggestions-api="{{ routes.search_url }}">
+  <nav id="navbarGlobal" class="navbar navbar-global navbar-expand-sm navbar-toggle-fill-height navbar-toggle-sticky-top sticky-top navbar-dark" data-scroll-top="true" data-expand-breakpoint="sm">
+    <div class="container">
+      <div class="d-flex d-sm-none justify-content-between w-100">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContentGlobal" aria-controls="navbarSupportedContentGlobal" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="{{ routes.root_url }}">
+          {% capture logo_alt %}{{ section.settings.logo.alt | default: shop.name }}{% endcapture %}
+          <img class="lazyload js"
+              src="{{ section.settings.logo | img_url: '300x300' }}"
+              data-src="{{ img_url }}"
+              data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+              data-aspectratio="{{ section.settings.logo.aspect_ratio }}"
+              data-sizes="auto"
+              alt="{{ logo_alt | escape }}"
+              style="max-width: {{ section.settings.logo_max_width }}px; max-height: 1.25rem;">
+          <noscript>
+            {% capture image_size %}{{ section.settings.logo_max_width | escape }}x{% endcapture %}
+            <img src="{{ section.settings.logo | img_url: image_size }}"
+                srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
+                alt="{{ section.settings.logo.alt | default: shop.name }}"
+                style="max-width: {{ section.settings.logo_max_width }}px; max-height: 1.25rem;">
+          </noscript>
+        </a>
+        <button id="navbarTogglerCart" class="navbar-toggler-esq navbar-toggled-hide" data-toggle="dropdown" data-target="#dropdownMenuCart" aria-haspopup="true" aria-expanded="false">
+          <span class="sr-only">{{ 'layout.cart.title' | t }}</span>
+          <span class="navbar-toggler-esq-icon navbar-bag-icon">
+            <div class="badge badge-pill badge-light {% if cart.item_count == 0 %}hide{% endif %}" data-cart-count-bubble>
+              <span data-cart-count>{{ cart.item_count }}</span>
+              <span class="sr-only d-sm-none">{{ 'layout.cart.items_count' | t: count: cart.item_count }}</span>
+            </div>
+          </span>
+        </button>
+      </div>
+
+      <div id="navbarSupportedContentGlobal" class="collapse navbar-collapse">
+        <form class="form-inline d-sm-none">
+          <div class="input-with-icon w-100">
+            <input class="form-control w-100" type="search" placeholder="{{ 'general.search.placeholder' | t }}" tabindex="-1" aria-disabled="disabled" data-toggle="modal" data-target="#globalSearchModal" data-predictive-search-open-drawer aria-label="{{ 'general.search.placeholder' | t }}">
+            <span class="icon">
+              {% include 'icon-search' %}
+            </span>
+          </div>
+        </form>
+
+        <ul class="navbar-nav nav-fill w-100">
+          <li class="nav-item nav-item-expand">
+            {% if section.settings.logo %}
+              {% assign img_url = section.settings.logo | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+              <a class="navbar-brand nav-link" href="{{ routes.root_url }}">
+                {% capture logo_alt %}{{ section.settings.logo.alt | default: shop.name }}{% endcapture %}
+                <img class="lazyload js"
+                    src="{{ section.settings.logo | img_url: '300x300' }}"
+                    data-src="{{ img_url }}"
+                    data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                    data-aspectratio="{{ section.settings.logo.aspect_ratio }}"
+                    data-sizes="auto"
+                    alt="{{ logo_alt | escape }}"
+                    style="max-width: {{ section.settings.logo_max_width }}px; max-height: 1.25rem;">
+                <noscript>
+                  {% capture image_size %}{{ section.settings.logo_max_width | escape }}x{% endcapture %}
+                  <img src="{{ section.settings.logo | img_url: image_size }}"
+                      srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
+                      alt="{{ section.settings.logo.alt | default: shop.name }}"
+                      style="max-width: {{ section.settings.logo_max_width }}px; max-height: 1.25rem;">
+                </noscript>
+              </a>
+            {% else %}
+              <a class="navbar-brand" href="{{ routes.root_url }}">{{ shop.name }}</a>
+            {% endif %}
+
+          </li>
+          {% for link in linklists[section.settings.main_linklist].links %}
+            <li class="nav-item {% if link.active or link.child_active %}active{% endif %}">
+              <a class="nav-link" href="{{ link.url }}" {% if link.current %}aria-current="page"{% endif %}>{{ link.title | escape }}</a>
+            </li>
+          {% endfor %}
+          <li class="nav-item nav-item-expand">
+            <a class="nav-link" data-toggle="modal" data-target="#globalSearchModal" data-predictive-search-open-drawer>
+              <span class="icon">
+                {% include 'icon-search' %}
+              </span>
+              <span class="sr-only">{{ 'layout.navigation.search' | t }}</span>
+            </a>
+          </li>
+          <li class="nav-item nav-item-dropdown nav-item-expand dropdown">
+            <a id="navbarDropdownCart" class="nav-link" href="#" data-toggle="dropdown" data-target="#dropdownMenuCart" aria-haspopup="true" aria-expanded="false">
+              <span class="sr-only">{{ 'layout.cart.title' | t }}</span>
+              <span class="navbar-toggler-esq-icon navbar-bag-icon">
+                <div class="badge badge-pill badge-light {% if cart.item_count == 0 %}hide{% endif %}" data-cart-count-bubble>
+                  <span data-cart-count>{{ cart.item_count }}</span>
+                  <span class="sr-only d-sm-none">{{ 'layout.cart.items_count' | t: count: cart.item_count }}</span>
+                </div>
+              </span>
+            </a>
+
+          </li>
+        </ul>
+      </div>
+
+      <aside id="dropdownMenuCart" class="dropdown-menu dropdown-menu-cart dropdown-menu-sm-center" aria-labelledby="navbarDropdownCart">
+        <a class="btn btn-primary btn-block" href="{{ routes.cart_url }}" role="button">{{ 'cart.general.checkout' | t }}</a>
+        <div class="list-group list-group-flush">
+          <a class="list-group-item" href="{{ routes.cart_url }}">
+            <span class="icon">
+              {% include 'icon-bag' %}
+            </span>
+            <span>{{ 'layout.cart.title' | t }}</span>
+          </a>
+          {% if shop.customer_accounts_enabled %}
+            {% if customer %}
+              <a class="list-group-item" href="{{ routes.account_url }}">
+                <span class="icon">
+                  {% include 'icon-gear-wide-connected' %}
+                </span>
+                <span>{{ 'layout.customer.account' | t }}</span>
+              </a>
+              <a class="list-group-item" href="{{ routes.account_logout_url }}">
+                <span class="icon">
+                  {% include 'icon-person-circle' %}
+                </span>
+                <span>{{ 'layout.customer.log_out' | t }}</span>
+              </a>
+            {% else %}
+              <a class="list-group-item" href="{{ routes.account_login_url }}">
+                <span class="icon">
+                  {% include 'icon-person-circle' %}
+                </span>
+                <span>{{ 'layout.customer.log_in' | t }}</span>
+              </a>
+            {% endif %}
+          {% endif %}
+        </div>
+      </aside>
+    </div>
+  </nav>
+
+  <aside id="globalSearchModal" class="modal modal-global-search fade" tabindex="-1" role="search" data-predictive-search-drawer aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="container">
+        <div class="modal-content">
+          <div class="modal-header navbar navbar-global navbar-dark">
+            <div class="navbar-collapse">
+              <form class="form-inline">
+                <div class="input-with-icon w-100">
+                  <input id="predictiveSearchDrawInput" class="form-control w-100" type="search" placeholder="{{ 'general.search.placeholder' | t }}" aria-label="{{ 'general.search.placeholder' | t }}" data-base-url="{{ routes.search_url }}" data-predictive-search-drawer-input>
+                  <span class="icon">
+                    {% include 'icon-search' %}
+                  </span>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-body" data-predictive-search-mount="drawer">
+            <section class="quick-links">
+              <h3>Quick Links</h3>
+              <ul class="nav flex-column">
+              </ul>
+            </section>
+            <section class="products d-none">
+              <h3>Products</h3>
+              <ul class="nav flex-column">
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<script defer="defer">
+  $(window).ready(function () {
+    const $globalSearchModal = $('#globalSearchModal');
+    const $navbarSupportedContentGlobal = $('#navbarSupportedContentGlobal');
+    const $dropdownMenuCart = $('#dropdownMenuCart');
+
+		$dropdownMenuCart.on('show.bs.dropdown', function () {
+      const $this = $(this);
+      const $navbarDropdownCartParent = $('#navbarDropdownCart').parent();
+			let position = $navbarDropdownCartParent.position();
+
+			if (position.top !== 0) {
+				$this.css({
+					top: position.top + $navbarDropdownCartParent.height(),
+					left: position.left
+				});
+			}
+
+      $(window).on('resize.dropdown.cart', _.debounce(function () {
+        position = $navbarDropdownCartParent.position();
+
+        if (position.top === 0) {
+          $this.css({
+            top: '',
+            left: ''
+          });
+        } else {
+          $this.css({
+            top: position.top + $navbarDropdownCartParent.height(),
+            left: position.left
+          });
+        }
+      }, 200, {
+        maxWait: 400
+      }));
+		});
+
+    $dropdownMenuCart.on('hidden.bs.dropdown', function () {
+      $(window).off('resize.dropdown.cart');
+    });
+
+    $navbarSupportedContentGlobal.on('shown.bs.collapse', function () {
+      $navbarSupportedContentGlobal.find('input[data-target="#globalSearchModal"]').trigger('blur');
+    });
+
+    $navbarSupportedContentGlobal.on('hidden.bs.collapse', function () {
+      $('#navbarGlobal')
+        .removeClass('toggling');
+    });
+
+    $globalSearchModal.on('show.bs.modal', function () {
+      $('html, body').animate({
+        scrollTop: $('#navbarGlobal').position().top
+      });
+
+      $('#navbarGlobal')
+        .addClass('modal-open')
+        .removeClass('modal-closed');
+    });
+
+    $globalSearchModal.on('shown.bs.modal', function () {
+      $globalSearchModal.find('input').trigger('focus');
+    });
+
+    $globalSearchModal.on('hide.bs.modal', function () {
+      $('#navbarGlobal')
+        .addClass('modal-closed')
+        .removeClass('modal-open');
+    });
+
+    $globalSearchModal.on('hidden.bs.modal', function () {
+      $navbarSupportedContentGlobal.find('input[data-target="#globalSearchModal"]').trigger('blur');
+    });
+
+    if (theme.settings.predictiveSearchEnabled) {
+      $('#predictiveSearchDrawInput').on('input', _.debounce(function (event) {
+        const $target = $(event.target);
+        const baseUrl = $target.data('base-url');
+
+        $.getJSON(`${baseUrl}/suggest.json`, {
+          q: $target.val(),
+          resources: {
+            type: 'product,collection,page,article',
+            options: {
+              unavailable_products: 'last'
+            }
+          }
+        }).done(function (response) {
+          const $sectionProducts = $globalSearchModal.find('section.products');
+          const products = response.resources.results.products;
+
+          if (products) {
+            $globalSearchModal.find('section.quick-links').addClass('d-none');
+            $sectionProducts.empty();
+
+            for (product of products) {
+              const $li = $('<li class="nav-item"></li>');
+              const $a = $(`<a class="nav-link" href="${product.url}">${product.title}</a>`)
+
+              $li.append($a);
+              $sectionProducts.append($li);
+            }
+
+            $sectionProducts.removeClass('d-none');
+          } else {
+            $sectionProducts.addClass('d-none');
+          }
+        });
+      }, 200, {
+        maxWait: 400
+      }));
+    }
+	});
+</script>
