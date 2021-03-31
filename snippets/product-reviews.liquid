@@ -1,0 +1,8 @@
+{% comment %}
+  Usage:
+  {% include 'product-reviews' %}
+{% endcomment %}
+
+<div id="shopify-product-reviews" class="container" data-id="{{ product.id }}">
+  {{ product.metafields.spr.reviews }}
+</div>
