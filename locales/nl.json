@@ -270,11 +270,11 @@
       "delete_confirm": "Weet je zeker dat je dit adres wilt verwijderen?"
     },
     "login": {
-      "title": "Aanmelden",
+      "title": "Inloggegevens",
       "email": "E-mail",
       "password": "Wachtwoord",
       "forgot_password": "Wachtwoord vergeten?",
-      "sign_in": "Aanmelden",
+      "sign_in": "Inloggen",
       "guest_title": "Doorgaan als gast",
       "guest_continue": "Verdergaan"
     },
@@ -363,8 +363,8 @@
     },
     "customer": {
       "account": "Account",
-      "log_out": "Afmelden",
-      "log_in": "Aanmelden",
+      "log_out": "Uitloggen",
+      "log_in": "Inloggen",
       "create_account": "Account aanmaken"
     },
     "footer": {
